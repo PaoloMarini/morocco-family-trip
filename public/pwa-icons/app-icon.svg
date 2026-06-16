@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Morocco Trip app icon</title>
+  <desc id="desc">A cream letter M on a warm terracotta background with a restrained sun motif.</desc>
+  <rect width="512" height="512" rx="112" fill="#a8492d"/>
+  <circle cx="374" cy="150" r="52" fill="#d89b42"/>
+  <path fill="#b95537" d="M0 356c64-38 118-56 162-54 46 2 88 28 132 29 54 1 102-37 156-46 25-4 46-1 62 6v221H0z"/>
+  <path fill="#8d3d28" d="M0 406c63-31 124-40 183-25 57 15 93 45 150 41 58-5 102-43 179-31v121H0z"/>
+  <g fill="none" stroke="#f7f0e5" stroke-width="10" stroke-linecap="round" opacity=".58">
+    <path d="M374 72v-24"/>
+    <path d="M374 252v-24"/>
+    <path d="M452 150h24"/>
+    <path d="M272 150h24"/>
+    <path d="m429 95 17-17"/>
+    <path d="m302 222 17-17"/>
+    <path d="m429 205 17 17"/>
+    <path d="m302 78 17 17"/>
+  </g>
+  <path fill="#f7f0e5" d="M118 348V171h45l70 116 70-116h44v177h-47V257l-50 82h-34l-51-82v91z"/>
+  <path fill="#fffaf3" fill-opacity=".55" d="M94 94h180v14H94zM94 122h126v10H94z"/>
+</svg>

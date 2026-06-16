@@ -8,6 +8,9 @@ import UsefulPage from './pages/UsefulPage'
 import type { Section } from './types/trip'
 import './App.css'
 
+const prefersReducedMotion = () =>
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
 function App() {
   const [activeSection, setActiveSection] = useState<Section>('home')
 
@@ -56,7 +59,10 @@ function App() {
             aria-current={activeSection === item.id ? 'page' : undefined}
             onClick={() => {
               setActiveSection(item.id)
-              window.scrollTo({ top: 0, behavior: 'smooth' })
+              window.scrollTo({
+                top: 0,
+                behavior: prefersReducedMotion() ? 'instant' : 'smooth',
+              })
             }}
           >
             <span className="bottom-nav__icon" aria-hidden="true">
