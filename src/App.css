@@ -561,7 +561,7 @@ a {
   left: 0;
   z-index: 30;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   padding: 0.45rem max(0.4rem, env(safe-area-inset-right))
     calc(0.45rem + env(safe-area-inset-bottom))
     max(0.4rem, env(safe-area-inset-left));
@@ -573,18 +573,25 @@ a {
 .bottom-nav button {
   display: flex;
   min-height: 3.5rem;
+  min-width: 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.15rem;
-  padding: 0.25rem;
+  padding: 0.25rem 0.15rem;
   color: var(--muted);
-  font-size: 0.67rem;
+  font-size: 0.62rem;
   font-weight: 700;
   background: none;
   border: 0;
   border-radius: 0.8rem;
   cursor: pointer;
+}
+
+.bottom-nav button > span:last-child {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  line-height: 1.1;
 }
 
 .bottom-nav button.active {
