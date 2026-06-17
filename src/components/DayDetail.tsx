@@ -42,16 +42,16 @@ function DayDetail({
 
       <div className="day-detail__meta">
         <div>
-          <span>Location</span>
+          <span>Place</span>
           <strong>{day.location}</strong>
         </div>
         <div>
-          <span>Staying at</span>
+          <span>Base</span>
           <strong>{day.accommodation}</strong>
         </div>
         {day.transfer && (
           <div>
-            <span>Travel</span>
+            <span>Moving today</span>
             <strong>{day.transfer}</strong>
           </div>
         )}
@@ -76,7 +76,7 @@ function DayDetail({
 
       {day.practicalNotes.length > 0 && (
         <section className="practical-notes">
-          <h3>Practical notes</h3>
+          <h3>Look after yourselves</h3>
           <ul>
             {day.practicalNotes.map((note) => (
               <li key={note.id}>{note.text}</li>
@@ -87,7 +87,7 @@ function DayDetail({
 
       {day.alternatives && day.alternatives.length > 0 && (
         <section className="day-alternatives">
-          <h3>Flexible alternatives</h3>
+          <h3>Other ideas</h3>
           <ul>
             {day.alternatives.map((activity) => (
               <ActivityItem activity={activity} key={activity.id} />
