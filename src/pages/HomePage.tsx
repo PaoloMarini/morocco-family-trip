@@ -25,18 +25,24 @@ const highlights = [
 const visualPreview = [
   {
     title: 'Medina details',
-    text: 'Doors, tiles, lanterns, courtyards and tiny alleys.',
-    imageUrl: `${basePath}trip-images/medina.svg`,
+    text: 'Courtyards, tiles, carved wood and palace geometry.',
+    imageUrl:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Bahia_Palace_large_court.jpg/900px-Bahia_Palace_large_court.jpg',
+    fallbackUrl: `${basePath}trip-images/medina.svg`,
   },
   {
     title: 'Atlas foothills',
     text: 'Red earth, olive trees, village paths and mountain light.',
-    imageUrl: `${basePath}trip-images/atlas.svg`,
+    imageUrl:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/SE_Ouirgane_Village_Dam_Al_Haouz_Oct25_A7CR_08497.jpg/900px-SE_Ouirgane_Village_Dam_Al_Haouz_Oct25_A7CR_08497.jpg',
+    fallbackUrl: `${basePath}trip-images/atlas.svg`,
   },
   {
     title: 'Desert sunset',
-    text: 'Stone desert, open horizon and a much bigger sky.',
-    imageUrl: `${basePath}trip-images/agafay.svg`,
+    text: 'Wide horizons, warm sand colours and a much bigger sky.',
+    imageUrl:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Dunes_de_Merzouga.jpg/900px-Dunes_de_Merzouga.jpg',
+    fallbackUrl: `${basePath}trip-images/agafay.svg`,
   },
 ]
 
@@ -109,7 +115,12 @@ function HomePage({ onExplore }: HomePageProps) {
         <div className="visual-preview-grid">
           {visualPreview.map((item) => (
             <article className="visual-preview" key={item.title}>
-              <img src={item.imageUrl} alt="" loading="lazy" />
+              <img
+                src={item.imageUrl}
+                alt=""
+                loading="lazy"
+                style={{ backgroundImage: `url(${item.fallbackUrl})` }}
+              />
               <div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
