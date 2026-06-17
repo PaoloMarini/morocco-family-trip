@@ -19,7 +19,7 @@ export const destinations: Destination[] = [
     symbol: '*',
     theme: 'terracotta',
     photoUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Bahia_Palace_large_court.jpg/900px-Bahia_Palace_large_court.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Bahia%20Palace%202018%201.jpg?width=900',
     photoAlt: 'Grand courtyard of Bahia Palace in Marrakesh',
     photoCredit: 'Photo: Bahia Palace, Wikimedia Commons',
     highlights: [
@@ -40,7 +40,7 @@ export const destinations: Destination[] = [
     symbol: '^',
     theme: 'mountain',
     photoUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/SE_Ouirgane_Village_Dam_Al_Haouz_Oct25_A7CR_08497.jpg/900px-SE_Ouirgane_Village_Dam_Al_Haouz_Oct25_A7CR_08497.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/SE%20Ouirgane%20Village%20Dam%20Al%20Haouz%20Oct25%20A7CR%2008497.jpg?width=900',
     photoAlt: 'Ouirgane village and Yacoub el Mansour barrage in the High Atlas',
     photoCredit: 'Photo: Ouirgane, Wikimedia Commons',
     highlights: [
@@ -61,7 +61,7 @@ export const destinations: Destination[] = [
     symbol: 'o',
     theme: 'desert',
     photoUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Dunes_de_Merzouga.jpg/900px-Dunes_de_Merzouga.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Dunes%20de%20Merzouga.jpg?width=900',
     photoAlt: 'Golden desert dunes in Morocco',
     photoCredit: 'Photo: Moroccan desert dunes, Wikimedia Commons',
     highlights: [
@@ -82,7 +82,7 @@ export const destinations: Destination[] = [
     symbol: '+',
     theme: 'rose',
     photoUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Bahia_Palace_large_court.jpg/900px-Bahia_Palace_large_court.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Bahia%20Palace%202018%201.jpg?width=900',
     photoAlt: 'Moroccan palace courtyard with zellij tilework',
     photoCredit: 'Photo: Marrakesh palace details, Wikimedia Commons',
     highlights: [
