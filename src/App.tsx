@@ -7,6 +7,7 @@ import PlayPage from './pages/PlayPage'
 import UsefulPage from './pages/UsefulPage'
 import type { Section } from './types/trip'
 import './App.css'
+import './pages/HomePage.css'
 
 const prefersReducedMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches
