@@ -11,68 +11,68 @@ export const destinations: Destination[] = [
     id: 'marrakesh-arrival',
     name: 'Marrakesh',
     region: 'The Red City',
-    dates: '17–19 June',
+    dates: '17-19 June',
     nights: 2,
     accommodation: 'Riad Sultan Suleiman',
     description:
-      'Our introduction to Morocco: hidden courtyards, intricate palaces, crowded souks and the great spectacle of Jemaa el-Fnaa.',
-    symbol: '✦',
+      'Our first Moroccan stop: red walls, hidden courtyards, colourful souks and the big evening theatre of Jemaa el-Fnaa.',
+    symbol: '*',
     theme: 'terracotta',
     highlights: [
-      'Explore the historic medina',
-      'Discover Moroccan architecture',
-      'Dinner beneath the city lights',
+      'Look for carved wooden doors, patterned tiles and tiny alleyways',
+      'Notice how quiet riads feel compared with the medina outside',
+      'Watch how Jemaa el-Fnaa changes from daytime square to evening spectacle',
     ],
   },
   {
     id: 'ouirgane',
     name: 'Ouirgane',
     region: 'High Atlas Mountains',
-    dates: '19–21 June',
+    dates: '19-21 June',
     nights: 2,
     accommodation: 'Ouirgane Ecolodge',
     description:
-      'A quieter Morocco of mountain valleys, Amazigh villages, red-earth trails and views towards the High Atlas.',
-    symbol: '▲',
+      'A slower mountain valley with olive trees, red-earth paths, Amazigh villages and big Atlas views.',
+    symbol: '^',
     theme: 'mountain',
     highlights: [
-      'Travel into the High Atlas',
-      'Walk through rural landscapes',
-      'Learn about Amazigh culture',
+      'Compare the quiet valley pace with Marrakesh medina energy',
+      'Look for terraced fields, olive trees and earth-coloured village buildings',
+      'Remember that Amazigh culture is older than modern borders in North Africa',
     ],
   },
   {
     id: 'agafay',
     name: 'Agafay',
     region: 'The Stone Desert',
-    dates: '21–22 June',
+    dates: '21-22 June',
     nights: 1,
     accommodation: 'Agafay Pearl Camp',
     description:
-      'A night in a dramatic rocky desert outside Marrakesh, with camel riding, sunset and a sky far darker than the city.',
-    symbol: '☾',
+      'Not classic Sahara dunes, but a rocky desert outside Marrakesh: open space, sunset colours and a huge sky.',
+    symbol: 'o',
     theme: 'desert',
     highlights: [
-      'Ride camels across the plateau',
-      'Watch sunset over the desert',
-      'Sleep beneath the stars',
+      'Watch how the colours change as the sun drops',
+      'Notice the difference between stone desert and sand desert',
+      'After dark, look up: the sky should feel much bigger than in the city',
     ],
   },
   {
     id: 'marrakesh-return',
     name: 'Marrakesh',
     region: 'A second look',
-    dates: '22–25 June',
+    dates: '22-25 June',
     nights: 3,
     accommodation: 'Riad Salman',
     description:
-      'Return with more confidence: revisit the medina, explore what we missed, shop, eat and slow down before flying home.',
-    symbol: '✺',
+      'Back to Marrakesh with more confidence: gardens, palaces, favourite corners, shopping and a slower final few days.',
+    symbol: '+',
     theme: 'rose',
     highlights: [
-      'Return to favourite places',
-      'Explore beyond the obvious sights',
-      'Choose our final Moroccan feast',
+      'Spot zellij tile patterns and painted wooden ceilings',
+      'Choose a favourite Marrakesh colour, door, tile or view',
+      'End the trip by comparing city, mountain and desert Morocco',
     ],
   },
 ]
@@ -82,7 +82,7 @@ export const navigation: NavigationItem[] = [
   { id: 'journey', label: 'Journey', icon: '↝' },
   { id: 'discover', label: 'Discover', icon: '◇' },
   { id: 'play', label: 'Play', icon: '◎' },
-  { id: 'useful', label: 'Useful', icon: '☰' },
+  { id: 'useful', label: 'Notes', icon: '☰' },
 ]
 
 export const discoverTopics: DiscoverTopic[] = [
@@ -121,8 +121,8 @@ export const discoverTopics: DiscoverTopic[] = [
 ]
 
 export const usefulItems: UsefulItem[] = [
-  { label: '£1', value: 'about 12–13 MAD' },
-  { label: 'Emergency', value: 'Police 19 · Ambulance 15' },
+  { label: 'Country', value: 'Morocco' },
+  { label: 'Languages', value: 'Arabic, Amazigh, French' },
   { label: 'Hello', value: 'Salam' },
   { label: 'Thank you', value: 'Shukran' },
 ]
