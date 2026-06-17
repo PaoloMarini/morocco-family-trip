@@ -2,6 +2,8 @@ type HomePageProps = {
   onExplore: () => void
 }
 
+const basePath = import.meta.env.BASE_URL
+
 const highlights = [
   {
     label: 'Red city',
@@ -24,17 +26,17 @@ const visualPreview = [
   {
     title: 'Medina details',
     text: 'Doors, tiles, lanterns, courtyards and tiny alleys.',
-    imageUrl: 'https://source.unsplash.com/900x700/?marrakech-medina',
+    imageUrl: `${basePath}trip-images/medina.svg`,
   },
   {
     title: 'Atlas foothills',
     text: 'Red earth, olive trees, village paths and mountain light.',
-    imageUrl: 'https://source.unsplash.com/900x700/?atlas-mountains-morocco',
+    imageUrl: `${basePath}trip-images/atlas.svg`,
   },
   {
     title: 'Desert sunset',
     text: 'Stone desert, open horizon and a much bigger sky.',
-    imageUrl: 'https://source.unsplash.com/900x700/?agafay-desert',
+    imageUrl: `${basePath}trip-images/agafay.svg`,
   },
 ]
 
