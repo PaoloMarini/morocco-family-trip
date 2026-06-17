@@ -20,6 +20,24 @@ const highlights = [
   },
 ]
 
+const visualPreview = [
+  {
+    title: 'Medina details',
+    text: 'Doors, tiles, lanterns, courtyards and tiny alleys.',
+    imageUrl: 'https://source.unsplash.com/900x700/?marrakech-medina',
+  },
+  {
+    title: 'Atlas foothills',
+    text: 'Red earth, olive trees, village paths and mountain light.',
+    imageUrl: 'https://source.unsplash.com/900x700/?atlas-mountains-morocco',
+  },
+  {
+    title: 'Desert sunset',
+    text: 'Stone desert, open horizon and a much bigger sky.',
+    imageUrl: 'https://source.unsplash.com/900x700/?agafay-desert',
+  },
+]
+
 function HomePage({ onExplore }: HomePageProps) {
   return (
     <>
@@ -77,6 +95,25 @@ function HomePage({ onExplore }: HomePageProps) {
             <strong>Marrakesh</strong>
             <span>22 June</span>
           </div>
+        </div>
+      </section>
+
+      <section className="page-section page-section--home-tools">
+        <div className="section-heading">
+          <p className="eyebrow">Visual clues</p>
+          <h2>What should we look for?</h2>
+        </div>
+
+        <div className="visual-preview-grid">
+          {visualPreview.map((item) => (
+            <article className="visual-preview" key={item.title}>
+              <img src={item.imageUrl} alt="" loading="lazy" />
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
