@@ -13,6 +13,9 @@ export type Destination = {
   symbol: string
   theme: DestinationTheme
   highlights: string[]
+  photoUrl?: string
+  photoAlt?: string
+  photoCredit?: string
 }
 
 export type NavigationItem = {
