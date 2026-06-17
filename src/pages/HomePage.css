@@ -81,6 +81,25 @@
   line-height: 1.48;
 }
 
+.destination-photo {
+  margin: -1.25rem -1.25rem 1rem;
+  background: rgba(168, 73, 45, 0.1);
+}
+
+.destination-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.destination-photo figcaption {
+  padding: 0.45rem 0.8rem 0.65rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
 @media (min-width: 720px) {
   .hero--polished .hero__content {
     padding-left: max(2rem, calc((100vw - 58rem) / 2));
