@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Agafay stone desert illustration</title>
+  <desc id="desc">Rocky desert with low hills, sunset and camel silhouettes.</desc>
+  <defs>
+    <linearGradient id="sunset" x1="0" x2="0" y1="0" y2="1">
+      <stop stop-color="#5b2a35" offset="0"/>
+      <stop stop-color="#bf6547" offset="0.48"/>
+      <stop stop-color="#f6bd61" offset="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sunset)"/>
+  <circle cx="890" cy="250" r="105" fill="#ffe3ad" opacity="0.9"/>
+  <path d="M0 430c130-50 260-78 410-45s235 80 415 42 285-28 375 16v357H0Z" fill="#74311f" opacity="0.75"/>
+  <path d="M0 525c170-56 315-62 470-18s300 63 475 11 225-53 255-35v317H0Z" fill="#9a6c2f"/>
+  <path d="M0 640c195-46 360-48 560-8s330 38 640-34v202H0Z" fill="#d89b42"/>
+  <path d="M0 710c230-36 395-28 600 6s345 18 600-32v116H0Z" fill="#fff1c8" opacity="0.65"/>
+  <g fill="#2b1f1d" opacity="0.9">
+    <ellipse cx="350" cy="612" rx="78" ry="32"/>
+    <circle cx="423" cy="585" r="25"/>
+    <path d="M280 614h-48l-24 36h35zM328 622l-18 58h28l22-56zM388 622l14 58h28l-10-66zM455 596l45 14 6-22-58-22z"/>
+    <path d="M420 568c16-42 34-55 60-57 18 22 15 52-12 77z"/>
+  </g>
+  <g fill="#2b1f1d" opacity="0.75">
+    <ellipse cx="720" cy="660" rx="58" ry="23"/>
+    <circle cx="775" cy="638" r="19"/>
+    <path d="M670 662h-35l-18 28h27zM708 666l-14 43h21l17-42zM752 666l10 43h22l-8-48zM774 626l36 12 5-18-45-17z"/>
+  </g>
+  <g fill="#fff4e6" opacity="0.68">
+    <circle cx="190" cy="130" r="5"/>
+    <circle cx="260" cy="190" r="4"/>
+    <circle cx="1040" cy="145" r="5"/>
+    <circle cx="985" cy="95" r="3"/>
+    <circle cx="760" cy="120" r="4"/>
+  </g>
+</svg>
