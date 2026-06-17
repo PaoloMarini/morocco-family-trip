@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">High Atlas valley illustration</title>
+  <desc id="desc">Layered High Atlas mountain valley with red earth, olive trees and village houses.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop stop-color="#d8ecdf" offset="0"/>
+      <stop stop-color="#f7f0e5" offset="1"/>
+    </linearGradient>
+    <linearGradient id="earth" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#d89b42" offset="0"/>
+      <stop stop-color="#a8492d" offset="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <circle cx="965" cy="140" r="75" fill="#f6bd61" opacity="0.8"/>
+  <path d="M0 405 180 205l180 155 170-230 210 250 155-165 305 260v325H0Z" fill="#334c40" opacity="0.95"/>
+  <path d="M0 480 230 280l150 135 190-185 195 220 125-110 310 205v255H0Z" fill="#5f6b4e"/>
+  <path d="M0 560c190-70 305-84 462-35s264 98 456 31 255-48 282-36v280H0Z" fill="url(#earth)"/>
+  <path d="M0 645c150-50 275-58 420-22s263 60 425 12 273-55 355-20v185H0Z" fill="#e1a45e" opacity="0.88"/>
+  <g fill="#fff4e6" stroke="#74311f" stroke-width="8">
+    <path d="M160 505h95v80h-95z"/>
+    <path d="m145 505 63-55 63 55z" fill="#a8492d"/>
+    <path d="M300 530h115v95H300z"/>
+    <path d="m282 530 76-65 76 65z" fill="#a8492d"/>
+    <path d="M470 500h88v72h-88z"/>
+    <path d="m456 500 58-48 58 48z" fill="#a8492d"/>
+  </g>
+  <g fill="#334c40">
+    <circle cx="760" cy="585" r="35"/>
+    <rect x="752" y="585" width="16" height="72" rx="8"/>
+    <circle cx="845" cy="625" r="28"/>
+    <rect x="839" y="625" width="13" height="55" rx="6"/>
+    <circle cx="950" cy="590" r="34"/>
+    <rect x="943" y="590" width="14" height="70" rx="7"/>
+  </g>
+  <g stroke="#fff4e6" stroke-opacity="0.38" stroke-width="8" fill="none">
+    <path d="M0 610c150-55 260-55 410-18s275 52 430 8 260-55 360-22"/>
+    <path d="M0 685c180-42 305-42 460-10s280 45 435 4 230-35 305-10"/>
+  </g>
+</svg>
