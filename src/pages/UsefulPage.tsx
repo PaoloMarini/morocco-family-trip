@@ -1,15 +1,21 @@
-import PwaStatus from '../components/PwaStatus'
 import { usefulItems } from '../data/trip'
+
+const lookingPrompts = [
+  'A door, tile or pattern you would photograph again',
+  'A sound that tells you where you are',
+  'A colour that feels very Marrakesh',
+  'A mountain or desert view that looks unreal',
+]
 
 function UsefulPage() {
   return (
     <section className="page-section page-section--top">
       <div className="section-heading">
-        <p className="eyebrow">Keep this close</p>
-        <h1 className="page-title">Useful information</h1>
+        <p className="eyebrow">Little things to notice</p>
+        <h1 className="page-title">Trip notes</h1>
         <p>
-          Essential details for money, language, accommodation and getting
-          around.
+          This is a small collection of clues, words and observation ideas for
+          understanding the places we are visiting.
         </p>
       </div>
 
@@ -22,43 +28,38 @@ function UsefulPage() {
         ))}
       </div>
 
-      <PwaStatus />
-
-      <section className="install-card" aria-labelledby="install-title">
+      <section className="install-card" aria-labelledby="noticing-title">
         <div>
-          <p className="detail-label">Install</p>
-          <h2 id="install-title">Save it before we fly</h2>
+          <p className="detail-label">Photo mission</p>
+          <h2 id="noticing-title">Four things to look for</h2>
         </div>
 
         <div className="install-card__steps">
           <div>
-            <h3>Android Chrome</h3>
+            <h3>In Marrakesh</h3>
             <ol>
-              <li>Open this page in Chrome.</li>
-              <li>Open the Chrome menu.</li>
-              <li>Tap Install app or Add to Home screen.</li>
-              <li>Open the installed app once before the flight.</li>
+              <li>Find a favourite door.</li>
+              <li>Spot a tile pattern that repeats perfectly.</li>
+              <li>Look up at painted wood ceilings.</li>
+              <li>Compare the riad courtyard with the street outside.</li>
             </ol>
           </div>
 
           <div>
-            <h3>iPhone Safari</h3>
+            <h3>In the mountains and desert</h3>
             <ol>
-              <li>Open this page in Safari.</li>
-              <li>Tap Share.</li>
-              <li>Tap Add to Home Screen.</li>
-              <li>Open the saved app once before the flight.</li>
+              <li>Notice the colour of the earth.</li>
+              <li>Look for olive trees and terraced fields.</li>
+              <li>Watch how shadows change at sunset.</li>
+              <li>Try to photograph the biggest sky.</li>
             </ol>
           </div>
         </div>
       </section>
 
       <div className="notice-card">
-        <strong>Important</strong>
-        <p>
-          We will verify and complete emergency numbers, addresses, transfer
-          details and map links before treating this section as authoritative.
-        </p>
+        <strong>Choose one each day</strong>
+        <p>{lookingPrompts.join(' - ')}</p>
       </div>
     </section>
   )
