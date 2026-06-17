@@ -2,10 +2,28 @@ type HomePageProps = {
   onExplore: () => void
 }
 
+const highlights = [
+  {
+    label: 'Today-first',
+    title: 'Daily plan in your pocket',
+    text: 'Open the Journey tab each morning for the selected day, practical notes and next-step navigation.',
+  },
+  {
+    label: 'Cash-aware',
+    title: 'Practical reminders',
+    text: 'Keep transfers, rest breaks, water, sun protection and price checks visible while moving around.',
+  },
+  {
+    label: 'Offline-friendly',
+    title: 'Built for the trip',
+    text: 'The app remains light, readable on mobile and installable as a simple iPhone home-screen companion.',
+  },
+]
+
 function HomePage({ onExplore }: HomePageProps) {
   return (
     <>
-      <section className="hero">
+      <section className="hero hero--polished">
         <div className="hero__content">
           <p className="hero__kicker">Our family adventure</p>
           <h1>Morocco</h1>
@@ -16,9 +34,12 @@ function HomePage({ onExplore }: HomePageProps) {
             mountains and desert.
           </p>
 
-          <button className="primary-button" type="button" onClick={onExplore}>
-            Begin the journey
-          </button>
+          <div className="hero__actions">
+            <button className="primary-button" type="button" onClick={onExplore}>
+              Open today’s plan
+            </button>
+            <span className="hero__hint">Marrakesh → Ouirgane → Agafay</span>
+          </div>
         </div>
 
         <div className="hero__landscape" aria-hidden="true">
@@ -30,10 +51,10 @@ function HomePage({ onExplore }: HomePageProps) {
         </div>
       </section>
 
-      <section className="page-section route-summary">
+      <section className="page-section route-summary route-summary--compact">
         <div className="section-heading">
           <p className="eyebrow">The route</p>
-          <h2>From city to mountains and desert</h2>
+          <h2>City, mountains, desert, then back to Marrakesh</h2>
         </div>
 
         <div className="route-line" aria-label="Trip route">
@@ -59,24 +80,20 @@ function HomePage({ onExplore }: HomePageProps) {
         </div>
       </section>
 
-      <section className="page-section">
+      <section className="page-section page-section--home-tools">
         <div className="section-heading">
-          <p className="eyebrow">First challenge</p>
-          <h2>What do you already know?</h2>
+          <p className="eyebrow">Use this during the stay</p>
+          <h2>Quick checks before leaving the riad</h2>
         </div>
 
-        <div className="feature-card">
-          <span className="feature-card__icon" aria-hidden="true">
-            ?
-          </span>
-          <div>
-            <h3>Morocco before landing</h3>
-            <p>
-              Test your assumptions about the country, its people, food,
-              languages and history.
-            </p>
-            <span className="coming-soon">Quiz coming in the next stage</span>
-          </div>
+        <div className="home-highlight-grid">
+          {highlights.map((item) => (
+            <article className="home-highlight" key={item.title}>
+              <span>{item.label}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
     </>
