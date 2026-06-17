@@ -6,6 +6,8 @@ import type {
   UsefulItem,
 } from '../types/trip'
 
+const basePath = import.meta.env.BASE_URL
+
 export const destinations: Destination[] = [
   {
     id: 'marrakesh-arrival',
@@ -18,9 +20,9 @@ export const destinations: Destination[] = [
       'Our first Moroccan stop: red walls, hidden courtyards, colourful souks and the big evening theatre of Jemaa el-Fnaa.',
     symbol: '*',
     theme: 'terracotta',
-    photoUrl: 'https://source.unsplash.com/1200x800/?marrakech',
-    photoAlt: 'Warm-coloured streets and buildings in Marrakesh',
-    photoCredit: 'Marrakesh photo from Unsplash',
+    photoUrl: `${basePath}trip-images/medina.svg`,
+    photoAlt: 'Illustration of warm-coloured Marrakesh medina streets',
+    photoCredit: 'Illustration: Marrakesh medina mood',
     highlights: [
       'Look for carved wooden doors, patterned tiles and tiny alleyways',
       'Notice how quiet riads feel compared with the medina outside',
@@ -38,9 +40,9 @@ export const destinations: Destination[] = [
       'A slower mountain valley with olive trees, red-earth paths, Amazigh villages and big Atlas views.',
     symbol: '^',
     theme: 'mountain',
-    photoUrl: 'https://source.unsplash.com/1200x800/?atlas-mountains-morocco',
-    photoAlt: 'Atlas mountain landscape in Morocco',
-    photoCredit: 'Atlas Mountains photo from Unsplash',
+    photoUrl: `${basePath}trip-images/atlas.svg`,
+    photoAlt: 'Illustration of High Atlas mountains and a valley village',
+    photoCredit: 'Illustration: Atlas valley mood',
     highlights: [
       'Compare the quiet valley pace with Marrakesh medina energy',
       'Look for terraced fields, olive trees and earth-coloured village buildings',
@@ -58,9 +60,9 @@ export const destinations: Destination[] = [
       'Not classic Sahara dunes, but a rocky desert outside Marrakesh: open space, sunset colours and a huge sky.',
     symbol: 'o',
     theme: 'desert',
-    photoUrl: 'https://source.unsplash.com/1200x800/?agafay-desert-morocco',
-    photoAlt: 'Rocky desert landscape near Marrakesh',
-    photoCredit: 'Agafay desert photo from Unsplash',
+    photoUrl: `${basePath}trip-images/agafay.svg`,
+    photoAlt: 'Illustration of Agafay stone desert at sunset',
+    photoCredit: 'Illustration: Agafay sunset mood',
     highlights: [
       'Watch how the colours change as the sun drops',
       'Notice the difference between stone desert and sand desert',
@@ -78,9 +80,9 @@ export const destinations: Destination[] = [
       'Back to Marrakesh with more confidence: gardens, palaces, favourite corners, shopping and a slower final few days.',
     symbol: '+',
     theme: 'rose',
-    photoUrl: 'https://source.unsplash.com/1200x800/?moroccan-palace-garden',
-    photoAlt: 'Moroccan palace or garden details',
-    photoCredit: 'Moroccan palace or garden photo from Unsplash',
+    photoUrl: `${basePath}trip-images/medina.svg`,
+    photoAlt: 'Illustration of Marrakesh medina architecture and warm colours',
+    photoCredit: 'Illustration: Marrakesh details mood',
     highlights: [
       'Spot zellij tile patterns and painted wooden ceilings',
       'Choose a favourite Marrakesh colour, door, tile or view',
