@@ -7,17 +7,53 @@ const lookingPrompts = [
   'A mountain or desert view that looks unreal',
 ]
 
+const emergencyItems = [
+  { label: 'Police', value: '19' },
+  { label: 'Ambulance / fire', value: '15' },
+  { label: 'Gendarmerie', value: '177' },
+  { label: 'European mobile emergency', value: '112' },
+]
+
+const stays = [
+  'Riad Sultan Suleiman - Marrakesh arrival stay',
+  'Ouirgane Ecolodge - High Atlas stay',
+  'Agafay Pearl Camp - desert camp',
+  'Riad Salman - final Marrakesh stay',
+]
+
 function UsefulPage() {
   return (
     <section className="page-section page-section--top">
       <div className="section-heading">
-        <p className="eyebrow">Little things to notice</p>
+        <p className="eyebrow">Notes and safety</p>
         <h1 className="page-title">Trip notes</h1>
         <p>
-          This is a small collection of clues, words and observation ideas for
-          understanding the places we are visiting.
+          Quick reference for the trip: emergency numbers first, then small
+          clues, words and observation ideas for understanding the places we are
+          visiting.
         </p>
       </div>
+
+      <section className="install-card" aria-labelledby="emergency-title">
+        <div>
+          <p className="detail-label">Emergency</p>
+          <h2 id="emergency-title">Numbers to know in Morocco</h2>
+        </div>
+
+        <div className="quick-facts">
+          {emergencyItems.map((item) => (
+            <div className="quick-fact" key={item.label}>
+              <span>{item.label}</span>
+              <strong>{item.value}</strong>
+            </div>
+          ))}
+        </div>
+
+        <p className="emergency-note">
+          In a real emergency, call first, then contact the accommodation or a
+          parent. Keep this page available offline where possible.
+        </p>
+      </section>
 
       <div className="quick-facts">
         {usefulItems.map((item) => (
@@ -27,6 +63,18 @@ function UsefulPage() {
           </div>
         ))}
       </div>
+
+      <section className="install-card" aria-labelledby="stays-title">
+        <div>
+          <p className="detail-label">Where we are staying</p>
+          <h2 id="stays-title">Four bases</h2>
+        </div>
+        <ol>
+          {stays.map((stay) => (
+            <li key={stay}>{stay}</li>
+          ))}
+        </ol>
+      </section>
 
       <section className="install-card" aria-labelledby="noticing-title">
         <div>
