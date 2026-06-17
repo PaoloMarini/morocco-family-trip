@@ -1,6 +1,10 @@
+import Quiz from '../components/Quiz'
+import { moroccoBeforeLandingQuiz } from '../data/quizzes/moroccoBeforeLanding'
 import { playActivities } from '../data/trip'
 
 function PlayPage() {
+  const remainingActivities = playActivities.slice(1)
+
   return (
     <section className="page-section page-section--top">
       <div className="section-heading">
@@ -12,8 +16,10 @@ function PlayPage() {
         </p>
       </div>
 
+      <Quiz quiz={moroccoBeforeLandingQuiz} />
+
       <div className="topic-grid">
-        {playActivities.map((activity) => (
+        {remainingActivities.map((activity) => (
           <article className="topic-card" key={activity.title}>
             <span className="topic-card__icon" aria-hidden="true">
               {activity.icon}
