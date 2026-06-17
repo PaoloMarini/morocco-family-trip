@@ -5,9 +5,9 @@ type StatusBadgeProps = {
 }
 
 const statusLabels: Record<ActivityStatus, string> = {
-  confirmed: 'Confirmed',
-  suggested: 'Suggested',
-  flexible: 'Flexible',
+  confirmed: 'Planned',
+  suggested: 'Idea',
+  flexible: 'Optional',
 }
 
 function StatusBadge({ status }: StatusBadgeProps) {
