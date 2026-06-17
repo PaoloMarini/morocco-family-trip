@@ -27,21 +27,21 @@ const visualPreview = [
     title: 'Medina details',
     text: 'Courtyards, tiles, carved wood and palace geometry.',
     imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Bahia_Palace_large_court.jpg/900px-Bahia_Palace_large_court.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Bahia%20Palace%202018%201.jpg?width=900',
     fallbackUrl: `${basePath}trip-images/medina.svg`,
   },
   {
     title: 'Atlas foothills',
     text: 'Red earth, olive trees, village paths and mountain light.',
     imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/SE_Ouirgane_Village_Dam_Al_Haouz_Oct25_A7CR_08497.jpg/900px-SE_Ouirgane_Village_Dam_Al_Haouz_Oct25_A7CR_08497.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/SE%20Ouirgane%20Village%20Dam%20Al%20Haouz%20Oct25%20A7CR%2008497.jpg?width=900',
     fallbackUrl: `${basePath}trip-images/atlas.svg`,
   },
   {
     title: 'Desert sunset',
     text: 'Wide horizons, warm sand colours and a much bigger sky.',
     imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Dunes_de_Merzouga.jpg/900px-Dunes_de_Merzouga.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Dunes%20de%20Merzouga.jpg?width=900',
     fallbackUrl: `${basePath}trip-images/agafay.svg`,
   },
 ]
@@ -119,7 +119,9 @@ function HomePage({ onExplore }: HomePageProps) {
                 src={item.imageUrl}
                 alt=""
                 loading="lazy"
-                style={{ backgroundImage: `url(${item.fallbackUrl})` }}
+                onError={(event) => {
+                  event.currentTarget.src = item.fallbackUrl
+                }}
               />
               <div>
                 <h3>{item.title}</h3>
