@@ -1,5 +1,6 @@
 type HomePageProps = {
   onExplore: () => void
+  onToday: () => void
 }
 
 const basePath = import.meta.env.BASE_URL
@@ -46,7 +47,7 @@ const visualPreview = [
   },
 ]
 
-function HomePage({ onExplore }: HomePageProps) {
+function HomePage({ onExplore, onToday }: HomePageProps) {
   return (
     <>
       <section className="hero hero--polished">
@@ -61,8 +62,11 @@ function HomePage({ onExplore }: HomePageProps) {
           </p>
 
           <div className="hero__actions">
-            <button className="primary-button" type="button" onClick={onExplore}>
-              Start the journey
+            <button className="primary-button" type="button" onClick={onToday}>
+              Open today&apos;s adventure
+            </button>
+            <button className="secondary-button" type="button" onClick={onExplore}>
+              Whole journey
             </button>
             <span className="hero__hint">Marrakesh - Ouirgane - Agafay</span>
           </div>
@@ -75,6 +79,23 @@ function HomePage({ onExplore }: HomePageProps) {
           <span className="dune dune--one" />
           <span className="dune dune--two" />
         </div>
+      </section>
+
+      <section className="page-section today-teaser">
+        <article className="today-teaser__card">
+          <div>
+            <p className="eyebrow">Today in Marrakech</p>
+            <h2>Breakfast, Koutoubia, souk mission, Ben Youssef, Le Jardin</h2>
+            <p>
+              A light first full morning with cultural context built in — and
+              Bahia Palace saved for the return to Marrakech, when it can be a
+              calmer royal-palaces day.
+            </p>
+          </div>
+          <button className="primary-button" type="button" onClick={onToday}>
+            Start today
+          </button>
+        </article>
       </section>
 
       <section className="page-section route-summary route-summary--compact">
