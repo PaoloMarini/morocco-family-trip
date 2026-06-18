@@ -95,6 +95,7 @@ export const destinations: Destination[] = [
 
 export const navigation: NavigationItem[] = [
   { id: 'home', label: 'Home', icon: '⌂' },
+  { id: 'today', label: 'Today', icon: '☀' },
   { id: 'journey', label: 'Journey', icon: '↝' },
   { id: 'discover', label: 'Discover', icon: '◇' },
   { id: 'play', label: 'Play', icon: '◎' },
