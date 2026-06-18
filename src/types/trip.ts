@@ -1,4 +1,4 @@
-export type Section = 'home' | 'journey' | 'discover' | 'play' | 'useful'
+export type Section = 'home' | 'today' | 'journey' | 'discover' | 'play' | 'useful'
 
 export type DestinationTheme = 'terracotta' | 'mountain' | 'desert' | 'rose'
 
