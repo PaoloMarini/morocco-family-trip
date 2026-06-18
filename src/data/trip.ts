@@ -98,7 +98,6 @@ export const navigation: NavigationItem[] = [
   { id: 'today', label: 'Today', icon: '☀' },
   { id: 'journey', label: 'Journey', icon: '↝' },
   { id: 'discover', label: 'Discover', icon: '◇' },
-  { id: 'play', label: 'Play', icon: '◎' },
   { id: 'useful', label: 'Notes', icon: '☰' },
 ]
 
