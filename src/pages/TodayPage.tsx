@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react'
 import './TodayPage.css'
 
+const basePath = import.meta.env.BASE_URL
+
 type Stop = {
   time: string
   title: string
@@ -17,9 +19,8 @@ const todayStops: Stop[] = [
     time: '08:30',
     title: 'Breakfast at the riad',
     subtitle: 'Start gently, check what everyone actually wants to eat today.',
-    image:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/Moroccan%20breakfast%20Marrakesh.jpg?width=900',
-    alt: 'Moroccan breakfast table with bread and tea',
+    image: `${basePath}trip-images/today-breakfast.svg`,
+    alt: 'Illustration of a Moroccan breakfast table with bread and tea',
     context:
       'Riads are built around calm internal courtyards. That contrast matters: Marrakesh can feel loud outside, but traditional houses turn inward for shade, privacy and quiet.',
     notice: ['Courtyard light', 'Mint tea ritual', 'Bread, honey and fresh juice as safe food anchors'],
@@ -29,9 +30,8 @@ const todayStops: Stop[] = [
     time: '09:30',
     title: 'Koutoubia from outside',
     subtitle: 'The city landmark and orientation point.',
-    image:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/Koutoubia%20Mosque%2C%20Marrakesh%2C%20Morocco.jpg?width=900',
-    alt: 'Koutoubia Mosque minaret in Marrakesh',
+    image: `${basePath}trip-images/today-koutoubia.svg`,
+    alt: 'Illustration of Koutoubia minaret in Marrakesh',
     context:
       'Koutoubia is a 12th-century Almohad mosque. Non-Muslim visitors do not enter, but the minaret is the visual anchor of Marrakesh and a cousin of famous towers in Rabat and Seville.',
     notice: ['The square shape of the minaret', 'The copper globes near the top', 'How the tower helps you re-orient in the medina'],
@@ -41,9 +41,8 @@ const todayStops: Stop[] = [
     time: '10:15',
     title: 'Souk explorer mission',
     subtitle: 'Not shopping yet. Observe first, buy later.',
-    image:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/Souks%20Marrakech.jpg?width=900',
-    alt: 'Colourful souk alley in Marrakesh',
+    image: `${basePath}trip-images/today-souks.svg`,
+    alt: 'Illustration of a colourful Marrakech souk alley',
     context:
       'The souks are not just tourist theatre. Marrakesh grew rich as a trading city, connecting mountain villages, desert routes, craftspeople and merchants.',
     notice: ['Metalwork: brass, copper, lanterns', 'Leather: bags, slippers, tannery smell', 'Spices and dyes: colour, scent, texture'],
@@ -53,9 +52,8 @@ const todayStops: Stop[] = [
     time: '11:15',
     title: 'Ben Youssef Madrasa',
     subtitle: 'The stop that turns the morning from wandering into understanding.',
-    image:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/Ben%20Youssef%20Madrasa%20Marrakesh%20Morocco.jpg?width=900',
-    alt: 'Courtyard of Ben Youssef Madrasa in Marrakesh',
+    image: `${basePath}trip-images/today-ben-youssef.svg`,
+    alt: 'Illustration of Ben Youssef Madrasa courtyard',
     context:
       'Imagine being a teenager arriving here to study. The courtyard is grand, but the student rooms are tiny. That contrast is the story: knowledge, discipline, beauty and very little personal space.',
     notice: ['Zellij tiles cut into geometric patterns', 'Calligraphy used as art', 'Shade, water and courtyards as climate design'],
@@ -65,9 +63,8 @@ const todayStops: Stop[] = [
     time: '13:00',
     title: 'Lunch at Le Jardin',
     subtitle: 'A soft landing: garden setting, variety, and no pressure to be “authentic”.',
-    image:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Jardin%20Secret%20Marrakech.jpg?width=900',
-    alt: 'Garden courtyard in Marrakesh',
+    image: `${basePath}trip-images/today-le-jardin.svg`,
+    alt: 'Illustration of a shaded Marrakech garden lunch courtyard',
     context:
       'A garden lunch fits the day: after alleys, crowds and stone, green space gives everyone a reset. One familiar choice is not a failure; it keeps the trip enjoyable.',
     notice: ['Shade and plants', 'Mint tea vs British mint tea', 'A menu with safer options for Sarah and Sonia'],
