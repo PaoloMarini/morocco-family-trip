@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { navigation } from './data/trip'
 import DiscoverPage from './pages/DiscoverPage'
 import HomePage from './pages/HomePage'
@@ -10,11 +10,31 @@ import './App.css'
 import './pages/HomePage.css'
 import './pages/HomePageFixes.css'
 
+type Theme = 'light' | 'dark'
+
 const prefersReducedMotion = () =>
   window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
+const getInitialTheme = (): Theme => {
+  const storedTheme = window.localStorage.getItem('morocco-theme')
+
+  if (storedTheme === 'light' || storedTheme === 'dark') {
+    return storedTheme
+  }
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light'
+}
+
 function App() {
   const [activeSection, setActiveSection] = useState<Section>('home')
+  const [theme, setTheme] = useState<Theme>(getInitialTheme)
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    window.localStorage.setItem('morocco-theme', theme)
+  }, [theme])
 
   const renderPage = () => {
     switch (activeSection) {
@@ -47,7 +67,17 @@ function App() {
           </span>
         </button>
 
-        <span className="trip-length">9 days</span>
+        <div className="top-bar__actions">
+          <button
+            className="theme-toggle"
+            type="button"
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            onClick={() => setTheme((current) => (current === 'dark' ? 'light' : 'dark'))}
+          >
+            {theme === 'dark' ? 'Light' : 'Dark'}
+          </button>
+          <span className="trip-length">9 days</span>
+        </div>
       </header>
 
       <main>{renderPage()}</main>
