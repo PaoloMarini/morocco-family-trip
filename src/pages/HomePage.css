@@ -31,10 +31,60 @@
   align-items: center;
 }
 
+.secondary-button {
+  min-height: 3.2rem;
+  padding: 0.82rem 1.1rem;
+  color: #fff4e6;
+  font-weight: 800;
+  background: rgba(255, 244, 230, 0.12);
+  border: 1px solid rgba(255, 244, 230, 0.32);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
 .hero__hint {
   color: rgba(255, 244, 230, 0.82);
   font-size: 0.86rem;
   font-weight: 750;
+}
+
+.today-teaser {
+  padding-top: 2rem;
+  padding-bottom: 0.4rem;
+}
+
+.today-teaser__card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.1rem;
+  color: #fffaf3;
+  background:
+    radial-gradient(circle at 90% 12%, rgba(246, 189, 97, 0.28), transparent 9rem),
+    linear-gradient(135deg, var(--green), #20382e);
+  border-radius: 1.2rem;
+  box-shadow: 0 16px 44px rgba(51, 76, 64, 0.2);
+}
+
+.today-teaser__card .eyebrow {
+  color: #f6bd61;
+}
+
+.today-teaser__card h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.55rem, 7vw, 2.35rem);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.today-teaser__card p {
+  margin: 0.7rem 0 0;
+  color: rgba(255, 250, 243, 0.84);
+  line-height: 1.55;
+}
+
+.today-teaser__card .primary-button {
+  justify-self: start;
 }
 
 .route-summary--compact {
@@ -143,6 +193,12 @@
 @media (min-width: 720px) {
   .hero--polished .hero__content {
     padding-left: max(2rem, calc((100vw - 58rem) / 2));
+  }
+
+  .today-teaser__card {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 1.35rem;
   }
 
   .home-highlight-grid,
