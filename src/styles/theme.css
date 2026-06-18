@@ -1,0 +1,95 @@
+html[data-theme='dark'] {
+  --ink: #fff4e6;
+  --muted: #d8c8b8;
+  --cream: #191413;
+  --paper: #241b18;
+  --terracotta: #f09a6d;
+  --terracotta-dark: #ffd9ae;
+  --ochre: #f0bd68;
+  --green: #89b49f;
+  --line: rgba(255, 244, 230, 0.16);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme='dark'] body {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.top-bar__actions {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.theme-toggle {
+  min-height: 2.35rem;
+  padding: 0.45rem 0.7rem;
+  color: var(--terracotta-dark);
+  font-size: 0.72rem;
+  font-weight: 850;
+  background: rgba(168, 73, 45, 0.1);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.myth-card h2,
+.article-facts h2,
+.article-section h2,
+.key-term-card h3,
+.trivia-callout strong,
+.notice-card strong,
+.install-card h2,
+.topic-card h2,
+.quick-fact strong,
+.day-period h3,
+.practical-notes h3,
+.day-alternatives h3 {
+  color: var(--ink);
+}
+
+.myth-card,
+.notice-card {
+  color: var(--ink);
+}
+
+.myth-card p,
+.notice-card p {
+  color: var(--muted);
+}
+
+html[data-theme='dark'] .top-bar,
+html[data-theme='dark'] .bottom-nav {
+  background: rgba(25, 20, 19, 0.92);
+}
+
+html[data-theme='dark'] .trip-length,
+html[data-theme='dark'] .theme-toggle {
+  background: rgba(240, 154, 109, 0.14);
+}
+
+html[data-theme='dark'] .myth-card,
+html[data-theme='dark'] .notice-card,
+html[data-theme='dark'] .quiz-feedback--incorrect,
+html[data-theme='dark'] .day-navigation button {
+  background: #33251b;
+  border-color: rgba(240, 189, 104, 0.24);
+}
+
+html[data-theme='dark'] .primary-button {
+  color: #241b18;
+  background: #ffd9ae;
+}
+
+html[data-theme='dark'] .quiz-option {
+  color: var(--ink);
+  background: #2c211d;
+}
+
+html[data-theme='dark'] .quiz-option--correct,
+html[data-theme='dark'] .quiz-option--incorrect,
+html[data-theme='dark'] .notice-prompt,
+html[data-theme='dark'] .status-badge {
+  color: #fffaf3;
+}
