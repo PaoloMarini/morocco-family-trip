@@ -8,6 +8,7 @@ type Stop = {
   title: string
   subtitle: string
   image: string
+  fallbackImage: string
   alt: string
   context: string
   notice: string[]
@@ -19,8 +20,10 @@ const todayStops: Stop[] = [
     time: '08:30',
     title: 'Breakfast at the riad',
     subtitle: 'Start gently, check what everyone actually wants to eat today.',
-    image: `${basePath}trip-images/today-breakfast.svg`,
-    alt: 'Illustration of a Moroccan breakfast table with bread and tea',
+    image:
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Breakfast_in_Tangier.jpg?width=900',
+    fallbackImage: `${basePath}trip-images/today-breakfast.svg`,
+    alt: 'Moroccan breakfast table with breads, eggs, honey, olives and tea',
     context:
       'Riads are built around calm internal courtyards. That contrast matters: Marrakesh can feel loud outside, but traditional houses turn inward for shade, privacy and quiet.',
     notice: ['Courtyard light', 'Mint tea ritual', 'Bread, honey and fresh juice as safe food anchors'],
@@ -30,8 +33,10 @@ const todayStops: Stop[] = [
     time: '09:30',
     title: 'Koutoubia from outside',
     subtitle: 'The city landmark and orientation point.',
-    image: `${basePath}trip-images/today-koutoubia.svg`,
-    alt: 'Illustration of Koutoubia minaret in Marrakesh',
+    image:
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Le_minaret_de_la_Koutoubia_(Marrakech,_Maroc)_(50961792868).jpg?width=900',
+    fallbackImage: `${basePath}trip-images/today-koutoubia.svg`,
+    alt: 'Koutoubia Mosque minaret in Marrakesh',
     context:
       'Koutoubia is a 12th-century Almohad mosque. Non-Muslim visitors do not enter, but the minaret is the visual anchor of Marrakesh and a cousin of famous towers in Rabat and Seville.',
     notice: ['The square shape of the minaret', 'The copper globes near the top', 'How the tower helps you re-orient in the medina'],
@@ -41,8 +46,10 @@ const todayStops: Stop[] = [
     time: '10:15',
     title: 'Souk explorer mission',
     subtitle: 'Not shopping yet. Observe first, buy later.',
-    image: `${basePath}trip-images/today-souks.svg`,
-    alt: 'Illustration of a colourful Marrakech souk alley',
+    image:
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Souks_Marrakech_074.JPG?width=900',
+    fallbackImage: `${basePath}trip-images/today-souks.svg`,
+    alt: 'Open-air souk market in Marrakesh with stalls and shoppers',
     context:
       'The souks are not just tourist theatre. Marrakesh grew rich as a trading city, connecting mountain villages, desert routes, craftspeople and merchants.',
     notice: ['Metalwork: brass, copper, lanterns', 'Leather: bags, slippers, tannery smell', 'Spices and dyes: colour, scent, texture'],
@@ -52,8 +59,10 @@ const todayStops: Stop[] = [
     time: '11:15',
     title: 'Ben Youssef Madrasa',
     subtitle: 'The stop that turns the morning from wandering into understanding.',
-    image: `${basePath}trip-images/today-ben-youssef.svg`,
-    alt: 'Illustration of Ben Youssef Madrasa courtyard',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Coranic_School_%28106589859%29.jpeg/900px-Coranic_School_%28106589859%29.jpeg',
+    fallbackImage: `${basePath}trip-images/today-ben-youssef.svg`,
+    alt: 'Courtyard of Ben Youssef Madrasa with a reflective pool',
     context:
       'Imagine being a teenager arriving here to study. The courtyard is grand, but the student rooms are tiny. That contrast is the story: knowledge, discipline, beauty and very little personal space.',
     notice: ['Zellij tiles cut into geometric patterns', 'Calligraphy used as art', 'Shade, water and courtyards as climate design'],
@@ -63,8 +72,10 @@ const todayStops: Stop[] = [
     time: '13:00',
     title: 'Lunch at Le Jardin',
     subtitle: 'A soft landing: garden setting, variety, and no pressure to be “authentic”.',
-    image: `${basePath}trip-images/today-le-jardin.svg`,
-    alt: 'Illustration of a shaded Marrakech garden lunch courtyard',
+    image:
+      'https://www.booknbook.ma/storage/restaurants/le-jardin-restaurant-marrakech-medina/gallery/le-jardin-restaurant-marrakech-medina-1.jpg',
+    fallbackImage: `${basePath}trip-images/today-le-jardin.svg`,
+    alt: 'Green tiled courtyard at Le Jardin restaurant in Marrakesh',
     context:
       'A garden lunch fits the day: after alleys, crowds and stone, green space gives everyone a reset. One familiar choice is not a failure; it keeps the trip enjoyable.',
     notice: ['Shade and plants', 'Mint tea vs British mint tea', 'A menu with safer options for Sarah and Sonia'],
@@ -185,7 +196,17 @@ function TodayPage() {
 
                 {isOpen && (
                   <div className="today-stop__details">
-                    <img src={stop.image} alt={stop.alt} loading="lazy" />
+                    <img
+                      src={stop.image}
+                      alt={stop.alt}
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      onError={(event) => {
+                        if (event.currentTarget.src !== stop.fallbackImage) {
+                          event.currentTarget.src = stop.fallbackImage
+                        }
+                      }}
+                    />
                     <div className="today-stop__text">
                       <p>{stop.context}</p>
                       <div className="notice-strip">
