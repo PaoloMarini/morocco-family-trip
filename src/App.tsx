@@ -9,6 +9,7 @@ import type { Section } from './types/trip'
 import './App.css'
 import './pages/HomePage.css'
 import './pages/HomePageFixes.css'
+import './styles/theme.css'
 
 type Theme = 'light' | 'dark'
 
