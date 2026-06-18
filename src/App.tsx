@@ -4,6 +4,7 @@ import DiscoverPage from './pages/DiscoverPage'
 import HomePage from './pages/HomePage'
 import JourneyPage from './pages/JourneyPage'
 import PlayPage from './pages/PlayPage'
+import TodayPage from './pages/TodayPage'
 import UsefulPage from './pages/UsefulPage'
 import type { Section } from './types/trip'
 import './App.css'
@@ -39,6 +40,8 @@ function App() {
 
   const renderPage = () => {
     switch (activeSection) {
+      case 'today':
+        return <TodayPage />
       case 'journey':
         return <JourneyPage />
       case 'discover':
@@ -48,7 +51,12 @@ function App() {
       case 'useful':
         return <UsefulPage />
       default:
-        return <HomePage onExplore={() => setActiveSection('journey')} />
+        return (
+          <HomePage
+            onExplore={() => setActiveSection('journey')}
+            onToday={() => setActiveSection('today')}
+          />
+        )
     }
   }
 
