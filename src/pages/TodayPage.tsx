@@ -55,8 +55,8 @@ const todayStops: Stop[] = [
     time: '15:30',
     title: 'Easy valley walk',
     subtitle: 'A short orientation walk, not a forced hike.',
-    image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/ouirgane-guide-1.jpg',
-    alt: 'Walking route in the Ouirgane valley',
+    image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider33.jpg',
+    alt: 'Mountain road and valley landscape near Ouirgane',
     context:
       'The best first walk is not about distance; it is about noticing irrigation channels, terraces, trees, village edges and how people use a dry mountain landscape carefully.',
     notice: ['Irrigation channels', 'Terraced fields', 'Donkeys, goats or sheep if we are lucky'],
@@ -66,8 +66,8 @@ const todayStops: Stop[] = [
     time: '18:30',
     title: 'Golden-hour reservoir view',
     subtitle: 'The sunset plan: quieter, cheaper and probably better than a rooftop cocktail.',
-    image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Excursion-Ouirgane-Valley.jpg',
-    alt: 'Lake and mountain view in the Ouirgane valley',
+    image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider111.jpg',
+    alt: 'Ouirgane valley and mountain view near the reservoir',
     context:
       'The Yacoub el Mansour dam was completed in 2008 to support water supply for the Marrakesh area and reduce sediment pressure downstream. It is a modern clue to how the valley works.',
     notice: ['Sun on red hills', 'Reflections on the reservoir', 'Temperature drop after sunset'],
