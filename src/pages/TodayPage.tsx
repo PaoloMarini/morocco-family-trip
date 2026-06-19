@@ -15,119 +15,162 @@ type Stop = {
   challenge: string
 }
 
+type QuizQuestion = {
+  question: string
+  answer: string
+}
+
 const todayStops: Stop[] = [
   {
-    time: '08:30',
-    title: 'Breakfast at the riad',
-    subtitle: 'Start gently, check what everyone actually wants to eat today.',
+    time: '09:00',
+    title: 'Leave Marrakesh gently',
+    subtitle: 'Pack, settle the riad, confirm pickup, water, cash and layers.',
     image:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/Breakfast_in_Tangier.jpg?width=900',
-    fallbackImage: `${basePath}trip-images/today-breakfast.svg`,
-    alt: 'Moroccan breakfast table with breads, eggs, honey, olives and tea',
-    context:
-      'Riads are built around calm internal courtyards. That contrast matters: Marrakesh can feel loud outside, but traditional houses turn inward for shade, privacy and quiet.',
-    notice: ['Courtyard light', 'Mint tea ritual', 'Bread, honey and fresh juice as safe food anchors'],
-    challenge: 'Choose one familiar food and one new thing to try later.',
-  },
-  {
-    time: '09:30',
-    title: 'Koutoubia from outside',
-    subtitle: 'The city landmark and orientation point.',
-    image:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/Le_minaret_de_la_Koutoubia_(Marrakech,_Maroc)_(50961792868).jpg?width=900',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Marrakech%20Medina%20city%20walls.jpg?width=900',
     fallbackImage: `${basePath}trip-images/today-koutoubia.svg`,
-    alt: 'Koutoubia Mosque minaret in Marrakesh',
+    alt: 'Red city walls of Marrakesh',
     context:
-      'Koutoubia is a 12th-century Almohad mosque. Non-Muslim visitors do not enter, but the minaret is the visual anchor of Marrakesh and a cousin of famous towers in Rabat and Seville.',
-    notice: ['The square shape of the minaret', 'The copper globes near the top', 'How the tower helps you re-orient in the medina'],
-    challenge: 'Can you spot the minaret again later from a completely different street?',
+      'Today is the mood shift: out of the dense medina and into the High Atlas foothills. Do the boring things early: charger check, passports, euros/MAD split, sunglasses, water, and a small bag for the car.',
+    notice: ['Check room corners', 'Keep small cash separate', 'No need to squeeze in another palace'],
+    challenge: 'Before leaving, each person picks one Marrakesh detail they noticed yesterday.',
   },
   {
-    time: '10:15',
-    title: 'Souk explorer mission',
-    subtitle: 'Not shopping yet. Observe first, buy later.',
+    time: '10:00',
+    title: 'Drive toward Asni and Ouirgane',
+    subtitle: 'Watch the landscape change from city edge to red earth and mountains.',
     image:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/Souks_Marrakech_074.JPG?width=900',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Atlas%20Mountains%2C%20Morocco.jpg?width=900',
     fallbackImage: `${basePath}trip-images/today-souks.svg`,
-    alt: 'Open-air souk market in Marrakesh with stalls and shoppers',
+    alt: 'Road landscape in the High Atlas Mountains of Morocco',
     context:
-      'The souks are not just tourist theatre. Marrakesh grew rich as a trading city, connecting mountain villages, desert routes, craftspeople and merchants.',
-    notice: ['Metalwork: brass, copper, lanterns', 'Leather: bags, slippers, tannery smell', 'Spices and dyes: colour, scent, texture'],
-    challenge: 'Find the best cat of the morning. Bonus points if it looks completely unimpressed.',
+      'The Nfiss valley is a good reminder that Morocco is not just Marrakesh theatre. Roads, reservoirs, villages, terraced fields and mountain trade all sit behind the city experience.',
+    notice: ['Olive groves', 'Red-earth villages', 'How the air and light feel cleaner than the medina'],
+    challenge: 'Try to spot the first moment when Marrakesh feels properly behind you.',
   },
   {
-    time: '11:15',
-    title: 'Ben Youssef Madrasa',
-    subtitle: 'The stop that turns the morning from wandering into understanding.',
+    time: '12:00',
+    title: 'Arrive at Ouirgane Ecolodge',
+    subtitle: 'Slow down: check in, breathe, reset the pace.',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Coranic_School_%28106589859%29.jpeg/900px-Coranic_School_%28106589859%29.jpeg',
-    fallbackImage: `${basePath}trip-images/today-ben-youssef.svg`,
-    alt: 'Courtyard of Ben Youssef Madrasa with a reflective pool',
-    context:
-      'Imagine being a teenager arriving here to study. The courtyard is grand, but the student rooms are tiny. That contrast is the story: knowledge, discipline, beauty and very little personal space.',
-    notice: ['Zellij tiles cut into geometric patterns', 'Calligraphy used as art', 'Shade, water and courtyards as climate design'],
-    challenge: 'Pick one pattern and see how far you can follow it before it repeats.',
-  },
-  {
-    time: '13:00',
-    title: 'Lunch at Le Jardin',
-    subtitle: 'A soft landing: garden setting, variety, and no pressure to be “authentic”.',
-    image:
-      'https://www.booknbook.ma/storage/restaurants/le-jardin-restaurant-marrakech-medina/gallery/le-jardin-restaurant-marrakech-medina-1.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/SE%20Ouirgane%20Village%20Dam%20Al%20Haouz%20Oct25%20A7CR%2008497.jpg?width=900',
     fallbackImage: `${basePath}trip-images/today-le-jardin.svg`,
-    alt: 'Green tiled courtyard at Le Jardin restaurant in Marrakesh',
+    alt: 'Ouirgane village and Yacoub el Mansour reservoir in the High Atlas',
     context:
-      'A garden lunch fits the day: after alleys, crowds and stone, green space gives everyone a reset. One familiar choice is not a failure; it keeps the trip enjoyable.',
-    notice: ['Shade and plants', 'Mint tea vs British mint tea', 'A menu with safer options for Sarah and Sonia'],
-    challenge: 'Order one safe dish and one shared curiosity dish for the table.',
+      'Ouirgane is a small rural commune in Al Haouz, set around the Nfiss river valley and the Yacoub el Mansour reservoir. This is the part of the trip where doing less is the point.',
+    notice: ['Bird sounds', 'Olive and walnut trees', 'Mountain colours changing through the day'],
+    challenge: 'Take one photo that feels completely unlike Marrakesh.',
+  },
+  {
+    time: '15:30',
+    title: 'Easy valley walk',
+    subtitle: 'A short orientation walk, not a forced hike.',
+    image:
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Toubkal%20National%20Park%20Morocco.jpg?width=900',
+    fallbackImage: `${basePath}trip-images/today-ben-youssef.svg`,
+    alt: 'Mountain trail landscape in Toubkal National Park',
+    context:
+      'Ouirgane sits close to Toubkal National Park. The best first walk is not about distance; it is about noticing irrigation channels, terraces, trees, village edges and how people use a dry mountain landscape carefully.',
+    notice: ['Irrigation channels', 'Terraced fields', 'Donkeys, goats or sheep if we are lucky'],
+    challenge: 'Find three signs that water is precious here.',
+  },
+  {
+    time: '18:30',
+    title: 'Golden-hour reservoir view',
+    subtitle: 'The sunset plan: quieter, cheaper and probably better than a rooftop cocktail.',
+    image:
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Barrage%20Yacoub%20El%20Mansour.jpg?width=900',
+    fallbackImage: `${basePath}trip-images/today-breakfast.svg`,
+    alt: 'Yacoub el Mansour dam and reservoir near Ouirgane',
+    context:
+      'The Yacoub el Mansour dam was built to help manage water supply and sediment in the Nfiss system. It is not ancient, but it explains the modern side of the valley: water engineering shapes what Marrakesh and the surrounding villages can be.',
+    notice: ['Sun on red hills', 'Reflections on the reservoir', 'Temperature drop after sunset'],
+    challenge: 'Ask: does the view feel peaceful, engineered, fragile, or all three?',
   },
 ]
 
-const soukMission = [
-  'Brass lantern',
-  'Traditional slippers',
-  'Orange spice pyramid',
-  'Carved wooden door',
-  'Cat sleeping in a ridiculous place',
-  'Someone making or repairing something',
-  'A courtyard you almost missed',
-  'The best shade of blue or green tile',
+const valleyMission = [
+  'Olive tree',
+  'Walnut tree',
+  'A terrace wall',
+  'Irrigation channel',
+  'Reservoir view',
+  'A mountain bird call',
+  'A red-earth building',
+  'A moment of total quiet',
 ]
 
 const culturalCards = [
   {
-    icon: '◇',
-    title: 'Why so much geometry?',
+    icon: 'ⵣ',
+    title: 'Amazigh, not “just Berber”',
     text:
-      'In many Islamic spaces, beauty comes from pattern, proportion, repetition and calligraphy rather than human images. The result is art that feels mathematical and alive at the same time.',
-  },
-  {
-    icon: '✍',
-    title: 'Writing as decoration',
-    text:
-      'Arabic calligraphy is not just text. It can be architecture, rhythm and devotion. Look for places where words become borders, frames and patterns.',
+      'Amazigh cultures long pre-date modern Morocco. In mountain areas, language, village life, oral tradition, weaving, agriculture and hospitality are part of the landscape, not a tourist costume.',
   },
   {
     icon: '💧',
-    title: 'Design for heat',
+    title: 'Water is the real story',
     text:
-      'Courtyards, fountains, thick walls, narrow streets and shade are climate technology. Before air-conditioning, buildings had to work with heat, light and airflow.',
+      'The reservoir, irrigation channels, terraces and trees all point to the same truth: in the High Atlas, water management is survival, politics, engineering and everyday life at once.',
+  },
+  {
+    icon: '⌛',
+    title: 'Almohad echoes',
+    text:
+      'Tinmel, deeper in the mountains, was tied to the Almohad movement that shaped medieval Marrakesh. The mountain backstory helps explain why the city became so important.',
   },
   {
     icon: '🧭',
-    title: 'Why the medina feels confusing',
+    title: '2023 earthquake context',
     text:
-      'The old city was not designed like a modern grid. It is layered, defensive, commercial and social. Getting a little lost is part of how it reveals itself.',
+      'Al Haouz was hit hard by the September 2023 earthquake. Enjoy the valley, but do it with humility: tourism should notice real communities, not just scenery.',
+  },
+]
+
+const quizQuestions: QuizQuestion[] = [
+  {
+    question: 'What is the biggest difference between Agafay and Ouirgane?',
+    answer: 'Agafay is a rocky desert landscape; Ouirgane is a mountain valley with trees, villages and a reservoir.',
+  },
+  {
+    question: 'Why do terraces matter in mountain farming?',
+    answer: 'They slow water, reduce erosion and create flat growing space on steep land.',
+  },
+  {
+    question: 'What should we avoid doing in villages?',
+    answer: 'Do not photograph people closely without asking, do not treat homes as scenery, and keep clothing/behaviour respectful.',
+  },
+  {
+    question: 'Why is Bahia Palace not in today’s plan?',
+    answer: 'Because today is a transfer and mountain reset day; Bahia fits better when we return to Marrakesh for a palace/history cluster.',
+  },
+]
+
+const videoLinks = [
+  {
+    title: 'High Atlas landscapes',
+    url: 'https://www.youtube.com/results?search_query=High+Atlas+Morocco+Ouirgane+valley',
+    description: 'Search YouTube for short visual previews of the road, villages and mountain scenery.',
+  },
+  {
+    title: 'Tinmel and the Almohads',
+    url: 'https://www.youtube.com/results?search_query=Tinmel+Mosque+Almohad+Morocco+history',
+    description: 'Useful background for why these mountains mattered to medieval Marrakesh.',
+  },
+  {
+    title: 'Amazigh culture in Morocco',
+    url: 'https://www.youtube.com/results?search_query=Amazigh+culture+Morocco+High+Atlas',
+    description: 'Good context for language, villages, food, music, weaving and identity.',
   },
 ]
 
 function TodayPage() {
   const [checkedItems, setCheckedItems] = useState<string[]>([])
-  const [openStop, setOpenStop] = useState(todayStops[1].title)
+  const [openStop, setOpenStop] = useState(todayStops[0].title)
+  const [openAnswer, setOpenAnswer] = useState('')
 
   const completedCount = checkedItems.length
   const progressLabel = useMemo(
-    () => `${completedCount}/${soukMission.length} souk clues found`,
+    () => `${completedCount}/${valleyMission.length} valley clues found`,
     [completedCount],
   )
 
@@ -141,38 +184,39 @@ function TodayPage() {
 
   return (
     <>
-      <section className="today-hero">
+      <section className="today-hero today-hero--mountain">
         <div className="today-hero__content">
-          <p className="hero__kicker">Today in Morocco</p>
-          <h1>Marrakesh without overdoing it</h1>
+          <p className="hero__kicker">Friday 19 June</p>
+          <h1>Marrakesh to Ouirgane</h1>
           <p className="today-hero__intro">
-            A curious, light first full morning: breakfast, Koutoubia, souk clues,
-            Ben Youssef Madrasa, then lunch at Le Jardin. Bahia Palace stays for
-            the return to Marrakesh, when everyone has more energy and context.
+            Today is deliberately calmer: leave the medina, drive into the High Atlas foothills,
+            check in at Ouirgane Ecolodge, then use the afternoon for a short valley walk and a
+            golden-hour reservoir view. The win is not cramming in more sights; it is changing pace.
           </p>
           <div className="today-hero__pills" aria-label="Today summary">
-            <span>08:30 breakfast</span>
-            <span>13:00 Le Jardin</span>
-            <span>Bahia later</span>
+            <span>Transfer day</span>
+            <span>High Atlas</span>
+            <span>Easy walk</span>
+            <span>Sunset reservoir</span>
           </div>
         </div>
-        <div className="today-hero__map-card" aria-label="Route summary">
-          <span className="map-dot map-dot--riad">Riad</span>
-          <span className="map-dot map-dot--koutoubia">Koutoubia</span>
-          <span className="map-dot map-dot--souks">Souks</span>
-          <span className="map-dot map-dot--ben">Ben Youssef</span>
-          <span className="map-dot map-dot--lunch">Le Jardin</span>
+        <div className="today-hero__map-card today-hero__map-card--mountain" aria-label="Route summary">
+          <span className="map-dot map-dot--riad">Marrakesh</span>
+          <span className="map-dot map-dot--koutoubia">Asni road</span>
+          <span className="map-dot map-dot--souks">Ouirgane</span>
+          <span className="map-dot map-dot--ben">Ecolodge</span>
+          <span className="map-dot map-dot--lunch">Reservoir</span>
           <span className="map-line" />
         </div>
       </section>
 
       <section className="page-section today-dashboard">
         <div className="section-heading">
-          <p className="eyebrow">Morning route</p>
+          <p className="eyebrow">Today’s route</p>
           <h2>Tap a stop before you arrive</h2>
           <p>
-            Each card gives you just enough context to make the place mean
-            something, without turning the morning into homework.
+            The day is built around transition: city to valley, noise to quiet, red walls to red hills.
+            Keep expectations flexible; the mountains reward looseness more than over-planning.
           </p>
         </div>
 
@@ -230,7 +274,7 @@ function TodayPage() {
       <section className="page-section curiosity-grid-section">
         <div className="section-heading">
           <p className="eyebrow">Look closer</p>
-          <h2>Four ideas that unlock the morning</h2>
+          <h2>Four ideas that unlock Ouirgane</h2>
         </div>
 
         <div className="curiosity-grid">
@@ -247,16 +291,16 @@ function TodayPage() {
       <section className="page-section mission-section">
         <div className="mission-card">
           <div>
-            <p className="eyebrow">Souk mission</p>
+            <p className="eyebrow">Valley mission</p>
             <h2>{progressLabel}</h2>
             <p>
-              This is not shopping pressure. It is a way to turn a busy market
-              into a game of noticing craft, colour, sound and absurd cats.
+              A light noticing game for the drive, lodge and walk. The goal is to see the working
+              valley, not just take mountain photos.
             </p>
           </div>
 
           <div className="mission-checklist">
-            {soukMission.map((item) => (
+            {valleyMission.map((item) => (
               <button
                 className={checkedItems.includes(item) ? 'mission-item mission-item--checked' : 'mission-item'}
                 key={item}
@@ -271,23 +315,67 @@ function TodayPage() {
         </div>
       </section>
 
+      <section className="page-section today-media-section">
+        <div className="section-heading">
+          <p className="eyebrow">Watch before or after</p>
+          <h2>Short video rabbit holes</h2>
+          <p>
+            These open YouTube searches rather than locking the page to one video that may disappear or
+            be region-blocked on mobile data.
+          </p>
+        </div>
+        <div className="video-grid">
+          {videoLinks.map((video) => (
+            <a className="video-card" href={video.url} target="_blank" rel="noreferrer" key={video.title}>
+              <span aria-hidden="true">▶</span>
+              <h3>{video.title}</h3>
+              <p>{video.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="page-section quiz-section">
+        <div className="mission-card quiz-card">
+          <div>
+            <p className="eyebrow">Car quiz</p>
+            <h2>Four questions for the road</h2>
+            <p>Tap each question after everyone has guessed. No scores needed unless Sarah and Sonia insist.</p>
+          </div>
+          <div className="quiz-list">
+            {quizQuestions.map((item) => {
+              const isOpen = openAnswer === item.question
+              return (
+                <button
+                  type="button"
+                  className={`quiz-item ${isOpen ? 'quiz-item--open' : ''}`}
+                  key={item.question}
+                  onClick={() => setOpenAnswer(isOpen ? '' : item.question)}
+                >
+                  <strong>{item.question}</strong>
+                  {isOpen && <span>{item.answer}</span>}
+                </button>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
       <section className="page-section later-section">
         <article className="later-card">
           <div>
-            <p className="eyebrow">Save for the return</p>
-            <h2>Bahia Palace deserves its own calm slot</h2>
+            <p className="eyebrow">Keep for later</p>
+            <h2>Do not turn today into homework</h2>
             <p>
-              Bahia Palace is absolutely worth visiting, but forcing it into
-              this morning would make the route less coherent. When we return
-              to Marrakesh, pair Bahia Palace with the Saadian Tombs and El Badi
-              Palace for a stronger “royal Marrakesh” day.
+              Tinmel, deeper history and longer hikes can wait unless the lodge recommends a very easy option.
+              Today should protect energy: transfer, lunch, swim/rest if available, short walk, sunset, dinner.
             </p>
           </div>
           <div className="later-card__stack">
-            <span>Bahia Palace</span>
-            <span>Saadian Tombs</span>
-            <span>El Badi Palace</span>
-            <span>Final Marrakesh shopping</span>
+            <span>Ask lodge about a gentle local walk</span>
+            <span>Confirm tomorrow’s mountain plan</span>
+            <span>Keep Bahia Palace for Marrakesh return</span>
+            <span>Carry a light layer after sunset</span>
           </div>
         </article>
       </section>
