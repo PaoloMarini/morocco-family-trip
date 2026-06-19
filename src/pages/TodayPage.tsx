@@ -1,14 +1,11 @@
 import { useMemo, useState } from 'react'
 import './TodayPage.css'
 
-const basePath = import.meta.env.BASE_URL
-
 type Stop = {
   time: string
   title: string
   subtitle: string
   image: string
-  fallbackImage: string
   alt: string
   context: string
   notice: string[]
@@ -25,10 +22,8 @@ const todayStops: Stop[] = [
     time: '09:00',
     title: 'Leave Marrakesh gently',
     subtitle: 'Pack, settle the riad, confirm pickup, water, cash and layers.',
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/SE_Ouirgane_Village_Dam_Al_Haouz_Oct25_A7CR_08497.jpg/900px-SE_Ouirgane_Village_Dam_Al_Haouz_Oct25_A7CR_08497.jpg',
-    fallbackImage: `${basePath}trip-images/today-koutoubia.svg`,
-    alt: 'Ouirgane village and Yacoub el Mansour barrage in the High Atlas',
+    image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider111.jpg',
+    alt: 'Ouirgane valley with olive groves and High Atlas mountains',
     context:
       'Today is the mood shift: out of the dense medina and into the High Atlas foothills. Do the boring things early: charger check, passports, euros/MAD split, sunglasses, water, and a small bag for the car.',
     notice: ['Check room corners', 'Keep small cash separate', 'No need to squeeze in another palace'],
@@ -38,10 +33,8 @@ const todayStops: Stop[] = [
     time: '10:00',
     title: 'Drive toward Asni and Ouirgane',
     subtitle: 'Watch the landscape change from city edge to red earth and mountains.',
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/NW_Pano_Ouirgane_La_Haouz_Oct25_A7CR_08782-4_PanoC.jpg/900px-NW_Pano_Ouirgane_La_Haouz_Oct25_A7CR_08782-4_PanoC.jpg',
-    fallbackImage: `${basePath}trip-images/today-souks.svg`,
-    alt: 'Panoramic view of Ouirgane and the High Atlas landscape',
+    image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider33.jpg',
+    alt: 'High Atlas mountain road landscape near Ouirgane',
     context:
       'Ouirgane is around 65 km south of Marrakesh by road and 14 km southwest of Asni. The drive makes the trip feel bigger: city edge, plain, red-earth villages, then the Nfiss valley.',
     notice: ['Olive groves', 'Red-earth villages', 'How the air and light feel cleaner than the medina'],
@@ -51,10 +44,8 @@ const todayStops: Stop[] = [
     time: '12:00',
     title: 'Arrive at Ouirgane Ecolodge',
     subtitle: 'Slow down: check in, breathe, reset the pace.',
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Square_House_Courtyard_Ouirgane_Oct25_A7CR_08536.jpg/900px-Square_House_Courtyard_Ouirgane_Oct25_A7CR_08536.jpg',
-    fallbackImage: `${basePath}trip-images/today-le-jardin.svg`,
-    alt: 'Traditional central courtyard house in Ouirgane',
+    image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider55.jpg',
+    alt: 'High Atlas village and valley scenery',
     context:
       'Ouirgane is a small rural commune in Al Haouz, set around the Nfiss river valley and the Yacoub el Mansour reservoir. This is the part of the trip where doing less is the point.',
     notice: ['Bird sounds', 'Olive and walnut trees', 'Mountain colours changing through the day'],
@@ -64,10 +55,8 @@ const todayStops: Stop[] = [
     time: '15:30',
     title: 'Easy valley walk',
     subtitle: 'A short orientation walk, not a forced hike.',
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Irrigated_Olive_Grove_Ouirgane_Oct25_A7CR_08582.jpg/900px-Irrigated_Olive_Grove_Ouirgane_Oct25_A7CR_08582.jpg',
-    fallbackImage: `${basePath}trip-images/today-ben-youssef.svg`,
-    alt: 'Irrigated olive grove in Ouirgane',
+    image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/ouirgane-guide-1.jpg',
+    alt: 'Walking route in the Ouirgane valley',
     context:
       'The best first walk is not about distance; it is about noticing irrigation channels, terraces, trees, village edges and how people use a dry mountain landscape carefully.',
     notice: ['Irrigation channels', 'Terraced fields', 'Donkeys, goats or sheep if we are lucky'],
@@ -77,10 +66,8 @@ const todayStops: Stop[] = [
     time: '18:30',
     title: 'Golden-hour reservoir view',
     subtitle: 'The sunset plan: quieter, cheaper and probably better than a rooftop cocktail.',
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/North_Yacoub_El_Mansour_Reservoir_Oct25_A7CR_08597.jpg/900px-North_Yacoub_El_Mansour_Reservoir_Oct25_A7CR_08597.jpg',
-    fallbackImage: `${basePath}trip-images/today-breakfast.svg`,
-    alt: 'Yacoub el Mansour reservoir near Ouirgane',
+    image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Excursion-Ouirgane-Valley.jpg',
+    alt: 'Lake and mountain view in the Ouirgane valley',
     context:
       'The Yacoub el Mansour dam was completed in 2008 to support water supply for the Marrakesh area and reduce sediment pressure downstream. It is a modern clue to how the valley works.',
     notice: ['Sun on red hills', 'Reflections on the reservoir', 'Temperature drop after sunset'],
@@ -200,18 +187,22 @@ function TodayPage() {
             <span>Sunset reservoir</span>
           </div>
         </div>
-        <div className="today-hero__map-card today-hero__map-card--route" aria-label="Schematic route from Marrakesh to Ouirgane">
-          <span className="map-compass">N ↑</span>
-          <span className="map-region map-region--plain">Haouz plain</span>
-          <span className="map-region map-region--mountains">High Atlas foothills</span>
-          <span className="map-dot map-dot--marrakesh">Marrakesh</span>
-          <span className="map-dot map-dot--asni">Asni</span>
-          <span className="map-dot map-dot--ouirgane">Ouirgane</span>
-          <span className="map-dot map-dot--lodge">Ecolodge</span>
-          <span className="map-dot map-dot--reservoir">Reservoir</span>
-          <span className="map-road map-road--main" />
-          <span className="map-road map-road--spur" />
-          <span className="map-hills" aria-hidden="true">⌁ ⌁ ⌁</span>
+        <div className="today-map-real" aria-label="Real map of Marrakesh, Asni and Ouirgane">
+          <iframe
+            title="Map from Marrakesh to Ouirgane"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-8.222%2C31.078%2C-7.814%2C31.692&layer=mapnik&marker=31.183%2C-8.083"
+            loading="lazy"
+          />
+          <div className="today-map-real__caption">
+            <strong>Marrakesh → Asni → Ouirgane</strong>
+            <a
+              href="https://www.google.com/maps/dir/Marrakesh/Ouirgane"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open route
+            </a>
+          </div>
         </div>
       </section>
 
@@ -249,11 +240,6 @@ function TodayPage() {
                       src={stop.image}
                       alt={stop.alt}
                       loading="lazy"
-                      onError={(event) => {
-                        if (event.currentTarget.src !== stop.fallbackImage) {
-                          event.currentTarget.src = stop.fallbackImage
-                        }
-                      }}
                     />
                     <div className="today-stop__text">
                       <p>{stop.context}</p>
