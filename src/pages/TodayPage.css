@@ -12,6 +12,13 @@
     linear-gradient(135deg, #bd6145 0%, #873822 46%, #2f4639 100%);
 }
 
+.today-hero--mountain {
+  background:
+    radial-gradient(circle at 20% 12%, rgba(235, 190, 111, 0.28), transparent 16rem),
+    radial-gradient(circle at 90% 38%, rgba(93, 121, 86, 0.28), transparent 18rem),
+    linear-gradient(135deg, #8d402b 0%, #665433 42%, #243f37 100%);
+}
+
 .today-hero::before {
   position: absolute;
   inset: 0;
@@ -271,14 +278,18 @@
 }
 
 .curiosity-grid,
-.mission-checklist {
+.mission-checklist,
+.video-grid,
+.quiz-list {
   display: grid;
   gap: 0.8rem;
 }
 
 .curiosity-card,
 .mission-card,
-.later-card {
+.later-card,
+.video-card,
+.quiz-item {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 1.2rem;
@@ -302,7 +313,8 @@
 
 .curiosity-card h3,
 .mission-card h2,
-.later-card h2 {
+.later-card h2,
+.video-card h3 {
   margin: 0;
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 500;
@@ -311,7 +323,8 @@
 
 .curiosity-card p,
 .mission-card p,
-.later-card p {
+.later-card p,
+.video-card p {
   margin: 0.6rem 0 0;
   color: var(--muted);
   line-height: 1.55;
@@ -359,6 +372,52 @@
   background: var(--green);
 }
 
+.video-card {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.video-card > span {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  color: #fffaf3;
+  background: var(--terracotta);
+  border-radius: 50%;
+}
+
+.quiz-card {
+  align-items: start;
+}
+
+.quiz-item {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.9rem;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+
+.quiz-item strong {
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+.quiz-item span {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.quiz-item--open {
+  border-color: rgba(51, 76, 64, 0.35);
+  background: rgba(51, 76, 64, 0.07);
+}
+
 .later-card {
   overflow: hidden;
   background:
@@ -391,16 +450,23 @@
 
   .today-stop__details,
   .mission-card,
-  .later-card {
+  .later-card,
+  .quiz-card {
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
 
-  .curiosity-grid {
+  .curiosity-grid,
+  .video-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .mission-checklist {
+  .video-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .mission-checklist,
+  .quiz-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
