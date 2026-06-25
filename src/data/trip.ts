@@ -10,85 +10,81 @@ export const destinations: Destination[] = [
   {
     id: 'marrakesh-arrival',
     name: 'Marrakesh',
-    region: 'The Red City',
+    region: 'First medina chapter',
     dates: '17-19 June',
     nights: 2,
     accommodation: 'Riad Sultan Suleiman',
     description:
-      'Our first Moroccan stop: red walls, hidden courtyards, colourful souks and the big evening theatre of Jemaa el-Fnaa.',
+      'Arrival, Jemaa el-Fnaa, Zeitoun Café, Koutoubia, souks and Ben Youssef: exciting, beautiful and already a reminder not to overdo monument rooms.',
     symbol: '*',
     theme: 'terracotta',
-    photoUrl:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/Bahia%20Palace%202018%201.jpg?width=900',
-    photoAlt: 'Grand courtyard of Bahia Palace in Marrakesh',
-    photoCredit: 'Photo: Bahia Palace, Wikimedia Commons',
+    photoUrl: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider111.jpg',
+    photoAlt: 'Moroccan mountain and valley landscape used as trip visual texture',
+    photoCredit: 'Photo: Ouirgane Guide',
     highlights: [
-      'Look for carved wooden doors, patterned tiles and tiny alleyways',
-      'Notice how quiet riads feel compared with the medina outside',
-      'Watch how Jemaa el-Fnaa changes from daytime square to evening spectacle',
+      'First evening walk to Jemaa el-Fnaa and dinner at Zeitoun Café',
+      'Koutoubia, souks and Ben Youssef gave the first proper medina context',
+      'Food lesson: Moroccan dishes work better when nobody feels forced into them',
     ],
   },
   {
     id: 'ouirgane',
     name: 'Ouirgane',
-    region: 'High Atlas Mountains',
+    region: 'High Atlas foothills',
     dates: '19-21 June',
     nights: 2,
     accommodation: 'Ouirgane Ecolodge',
     description:
-      'A slower mountain valley with olive trees, red-earth paths, Amazigh villages and big Atlas views.',
+      'The reset: mountain air, guided walking, lodge time, layered breakfast breads and the beef tagine that proved the girls had not written off Moroccan food entirely.',
     symbol: '^',
     theme: 'mountain',
-    photoUrl:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/SE%20Ouirgane%20Village%20Dam%20Al%20Haouz%20Oct25%20A7CR%2008497.jpg?width=900',
-    photoAlt: 'Ouirgane village and Yacoub el Mansour barrage in the High Atlas',
-    photoCredit: 'Photo: Ouirgane, Wikimedia Commons',
+    photoUrl: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider33.jpg',
+    photoAlt: 'High Atlas mountain road and valley near Ouirgane',
+    photoCredit: 'Photo: Ouirgane Guide',
     highlights: [
-      'Compare the quiet valley pace with Marrakesh medina energy',
-      'Look for terraced fields, olive trees and earth-coloured village buildings',
-      'Remember that Amazigh culture is older than modern borders in North Africa',
+      'Guided walk around Ouirgane and the surrounding landscape',
+      'A slower rhythm after Marrakesh: shade, rest and room games mattered',
+      'Msemen-style layered breads became a proper food discovery',
     ],
   },
   {
     id: 'agafay',
     name: 'Agafay',
-    region: 'The Stone Desert',
+    region: 'Stone desert camp',
     dates: '21-22 June',
     nights: 1,
     accommodation: 'Agafay Pearl Camp',
     description:
-      'Not classic Sahara dunes, but a rocky desert outside Marrakesh: open space, sunset colours and a huge sky.',
+      'Not Sahara dunes, but a rocky desert experience with camp atmosphere, sunset, camel ride photos and the wide-open-sky moment of the trip.',
     symbol: 'o',
     theme: 'desert',
-    photoUrl:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/Dunes%20de%20Merzouga.jpg?width=900',
-    photoAlt: 'Golden desert dunes in Morocco',
-    photoCredit: 'Photo: Moroccan desert dunes, Wikimedia Commons',
+    photoUrl: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider55.jpg',
+    photoAlt: 'Moroccan landscape used for Agafay visual placeholder',
+    photoCredit: 'Photo: Ouirgane Guide',
     highlights: [
-      'Watch how the colours change as the sun drops',
-      'Notice the difference between stone desert and sand desert',
-      'After dark, look up: the sky should feel much bigger than in the city',
+      'Camel ride at Agafay Pearl Camp',
+      'Sunset and camp dinner were the point, not a packed activity list',
+      'The camel ride videos later exposed the Google Photos timezone oddity',
     ],
   },
   {
     id: 'marrakesh-return',
     name: 'Marrakesh',
-    region: 'A second look',
+    region: 'Return, gardens and final choices',
     dates: '22-25 June',
     nights: 3,
     accommodation: 'Riad Salman',
     description:
-      'Back to Marrakesh with more confidence: gardens, palaces, favourite corners, shopping and a slower final few days.',
+      'Back to Marrakesh with better judgement: Bahia Palace, Majorelle, YSL, Berber art, modern-mall resets, Meydene/ANIMA planning and a deliberately lighter departure.',
     symbol: '+',
     theme: 'rose',
-    photoUrl:
-      'https://commons.wikimedia.org/wiki/Special:FilePath/Bahia%20Palace%202018%201.jpg?width=900',
-    photoAlt: 'Moroccan palace courtyard with zellij tilework',
-    photoCredit: 'Photo: Marrakesh palace details, Wikimedia Commons',
+    photoUrl: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider111.jpg',
+    photoAlt: 'Ouirgane valley image reused as a reliable trip image',
+    photoCredit: 'Photo: Ouirgane Guide',
     highlights: [
-      'Spot zellij tile patterns and painted wooden ceilings',
-      'Choose a favourite Marrakesh colour, door, tile or view',
-      'End the trip by comparing city, mountain and desert Morocco',
+      'Bahia Palace was done after Agafay, when royal Marrakesh made more sense',
+      'Jardin Majorelle, YSL Museum and Berber Art Museum were completed as a combo',
+      'The final-day logic shifted toward Meydene, ANIMA and modern contrast rather than more empty rooms',
     ],
   },
 ]
@@ -104,68 +100,66 @@ export const navigation: NavigationItem[] = [
 export const discoverTopics: DiscoverTopic[] = [
   {
     icon: '⌛',
-    title: 'History',
-    description: 'Caravans, dynasties, empires and the story of Marrakesh.',
+    title: 'Marrakesh in layers',
+    description: 'Jemaa el-Fnaa, Koutoubia, Ben Youssef, Bahia and why the city works best in small doses.',
   },
   {
     icon: 'ⵣ',
-    title: 'Amazigh culture',
-    description: 'The people, languages and traditions of North Africa.',
+    title: 'Amazigh and Atlas context',
+    description: 'Ouirgane, mountain villages, water, terraces and why the High Atlas is not just scenery.',
   },
   {
     icon: '✦',
-    title: 'Architecture',
-    description: 'Riads, mosques, gardens, geometric art and hidden courtyards.',
+    title: 'Beauty versus fatigue',
+    description: 'Zellij, courtyards and carved ceilings are wonderful; too many empty rooms in a row are not.',
   },
   {
     icon: '◌',
-    title: 'Food',
-    description: 'Tagines, couscous, bread, mint tea and what we should taste.',
+    title: 'Food discoveries',
+    description: 'From cautious first tajines to beef tagine, msemen-style breads, chips breaks and non-tajine cravings.',
   },
   {
     icon: '؟',
-    title: 'Language',
-    description:
-      'A few useful words in Moroccan Arabic and how to pronounce them.',
+    title: 'Practical Morocco',
+    description: 'Taxis, cash, supermarkets, mall resets, heat management, tickets and when not to force a plan.',
   },
   {
     icon: '✓',
-    title: 'Culture',
-    description:
-      'Hospitality, religion, clothing and behaving like thoughtful guests.',
+    title: 'Family rhythm',
+    description: 'The winning pattern: one strong thing, then shade, food, games, rest or something modern.',
   },
 ]
 
 export const usefulItems: UsefulItem[] = [
   { label: 'Country', value: 'Morocco' },
-  { label: 'Languages', value: 'Arabic, Amazigh, French' },
-  { label: 'Hello', value: 'Salam' },
-  { label: 'Thank you', value: 'Shukran' },
+  { label: 'Bases', value: 'Riad Sultan Suleiman · Ouirgane Ecolodge · Agafay Pearl Camp · Riad Salman' },
+  { label: 'Trip lesson', value: 'One main outing at a time beats a forced checklist' },
+  { label: 'Hello / thanks', value: 'Salam · Shukran' },
 ]
 
 export const playActivities: PlayActivity[] = [
   {
     icon: '?',
-    title: 'Morocco before landing quiz',
+    title: 'What actually happened quiz',
     description:
-      'A quick quiz for the flight: geography, food, history and first impressions.',
+      'A post-trip quiz: where did the beef tagine work, which place caused the Google Photos bug, and what was not the same as Menara Mall?',
   },
   {
-    icon: '؟',
-    title: 'Darija phrase challenge',
+    icon: '◌',
+    title: 'Best food surprise',
     description:
-      'Practice a handful of useful Moroccan Arabic words before trying them out.',
+      'Compare the first chicken tajine/couscous reaction with the later beef tagine and breakfast breads.',
   },
   {
     icon: '◇',
-    title: 'Photo scavenger hunt',
+    title: 'Photo scavenger hunt review',
     description:
-      'A light challenge to notice doors, details, colours, meals and moments.',
+      'Pick favourite doors, cats, tiles, mountain views, camel photos, garden colours and accidental funny moments.',
   },
   {
     icon: '✓',
-    title: 'Fact or fiction',
+    title: 'Trip awards',
     description:
-      'Spot which travel claims are true and which need a little suspicion.',
+      'Best view, best meal, biggest relief, worst heat moment, most overrated room and best family decision.',
   },
 ]
