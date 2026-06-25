@@ -49,6 +49,7 @@ export type ActivityCategory =
   | 'departure'
   | 'food'
   | 'nature'
+  | 'planning'
   | 'rest'
   | 'shopping'
   | 'sightseeing'
