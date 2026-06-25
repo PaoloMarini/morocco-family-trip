@@ -19,134 +19,105 @@ type QuizQuestion = {
 
 const todayStops: Stop[] = [
   {
-    time: '09:00',
-    title: 'Leave Marrakesh gently',
-    subtitle: 'Pack, settle the riad, confirm pickup, water, cash and layers.',
+    time: '08:30',
+    title: 'Final breakfast and room sweep',
+    subtitle: 'Eat, check every corner and avoid creating a last-minute panic.',
     image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider111.jpg',
-    alt: 'Ouirgane valley with olive groves and High Atlas mountains',
+    alt: 'Moroccan mountain and valley landscape',
     context:
-      'Today is the mood shift: out of the dense medina and into the High Atlas foothills. Do the boring things early: charger check, passports, euros/MAD split, sunglasses, water, and a small bag for the car.',
-    notice: ['Check room corners', 'Keep small cash separate', 'No need to squeeze in another palace'],
-    challenge: 'Before leaving, each person picks one Marrakesh detail they noticed yesterday.',
+      'Departure day is not the day for new ambitions. The successful version is boring: breakfast, bags, chargers, passports, medicines, cables, souvenirs and one final room check before leaving Riad Salman.',
+    notice: ['Passports', 'Chargers and adapters', 'Souvenirs and laundry bags'],
+    challenge: 'Everyone names one favourite moment before the bags close.',
   },
   {
-    time: '10:00',
-    title: 'Drive toward Asni and Ouirgane',
-    subtitle: 'Watch the landscape change from city edge to red earth and mountains.',
+    time: '10:30',
+    title: 'Check out of Riad Salman',
+    subtitle: 'Settle any extras and keep airport documents easy to reach.',
     image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider33.jpg',
-    alt: 'High Atlas mountain road landscape near Ouirgane',
+    alt: 'Road and mountain landscape in Morocco',
     context:
-      'Ouirgane is around 65 km south of Marrakesh by road and 14 km southwest of Asni. The drive makes the trip feel bigger: city edge, plain, red-earth villages, then the Nfiss valley.',
-    notice: ['Olive groves', 'Red-earth villages', 'How the air and light feel cleaner than the medina'],
-    challenge: 'Try to spot the first moment when Marrakesh feels properly behind you.',
+      'The trip moved through four bases: Riad Sultan Suleiman, Ouirgane Ecolodge, Agafay Pearl Camp and Riad Salman. Today closes the loop back to the airport, so luggage and timing matter more than another sight.',
+    notice: ['Payment settled', 'Driver / transfer confirmed', 'Water for the airport wait'],
+    challenge: 'Pick the one thing we would do differently if we planned Morocco again.',
   },
   {
     time: '12:00',
-    title: 'Arrive at Ouirgane Ecolodge',
-    subtitle: 'Slow down: check in, breathe, reset the pace.',
+    title: 'Airport transfer buffer',
+    subtitle: 'Leave Marrakesh with margin, not drama.',
     image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider55.jpg',
-    alt: 'High Atlas village and valley scenery',
+    alt: 'Moroccan landscape and road scenery',
     context:
-      'Ouirgane is a small rural commune in Al Haouz, set around the Nfiss river valley and the Yacoub el Mansour reservoir. This is the part of the trip where doing less is the point.',
-    notice: ['Bird sounds', 'Olive and walnut trees', 'Mountain colours changing through the day'],
-    challenge: 'Take one photo that feels completely unlike Marrakesh.',
+      'Marrakesh traffic, luggage, check-in queues and airport formalities can all eat time. The right final-day decision is to be early and relaxed rather than clever and late.',
+    notice: ['Traffic buffer', 'Boarding passes', 'Snacks before security if needed'],
+    challenge: 'Choose the trip award winners: best view, best food, funniest moment, biggest relief.',
   },
   {
-    time: '15:30',
-    title: 'Easy valley walk',
-    subtitle: 'A short orientation walk, not a forced hike.',
-    image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider33.jpg',
-    alt: 'Mountain road and valley landscape near Ouirgane',
-    context:
-      'The best first walk is not about distance; it is about noticing irrigation channels, terraces, trees, village edges and how people use a dry mountain landscape carefully.',
-    notice: ['Irrigation channels', 'Terraced fields', 'Donkeys, goats or sheep if we are lucky'],
-    challenge: 'Find three signs that water is precious here.',
-  },
-  {
-    time: '18:30',
-    title: 'Golden-hour reservoir view',
-    subtitle: 'The sunset plan: quieter, cheaper and probably better than a rooftop cocktail.',
+    time: 'Flight',
+    title: 'Photos, music and decompression',
+    subtitle: 'Use the flight home to turn the trip into memories rather than a blur.',
     image: 'https://ouirganeguide.com/wp-content/uploads/2018/01/Slider111.jpg',
-    alt: 'Ouirgane valley and mountain view near the reservoir',
+    alt: 'Ouirgane valley and High Atlas view',
     context:
-      'The Yacoub el Mansour dam was completed in 2008 to support water supply for the Marrakesh area and reduce sediment pressure downstream. It is a modern clue to how the valley works.',
-    notice: ['Sun on red hills', 'Reflections on the reservoir', 'Temperature drop after sunset'],
-    challenge: 'Ask: does the view feel peaceful, engineered, fragile, or all three?',
+      'The flight is good for sorting photos, noting what actually happened and reading/listening rather than doom-scrolling. The Google Photos timestamp weirdness is a job for later, not the airport queue.',
+    notice: ['Download music or guides', 'Favourite photos', 'Do not fight Google Photos today'],
+    challenge: 'Each person chooses three photos that explain the trip.',
   },
 ]
 
-const valleyMission = [
-  'Olive tree',
-  'Walnut tree',
-  'A terrace wall',
-  'Irrigation channel',
-  'Reservoir view',
-  'A mountain bird call',
-  'A red-earth building',
-  'A moment of total quiet',
+const departureMission = [
+  'Passport seen today',
+  'Chargers packed',
+  'Bathroom checked',
+  'Under-bed check',
+  'Souvenirs packed safely',
+  'MAD / card / wallet checked',
+  'Airport transfer confirmed',
+  'One favourite memory shared',
 ]
 
 const culturalCards = [
   {
-    icon: 'ⵣ',
-    title: 'Amazigh, not “just Berber”',
+    icon: '↝',
+    title: 'The actual route',
     text:
-      'Amazigh cultures long pre-date modern Morocco. In mountain areas, language, village life, oral tradition, weaving, agriculture and hospitality are part of the landscape, not a tourist costume.',
+      'Marrakesh first, then Ouirgane, Agafay, and back to Marrakesh. The journey worked because each landscape changed the rhythm: city, mountain, stone desert, city again.',
   },
   {
-    icon: '💧',
-    title: 'Water is the real story',
+    icon: '◇',
+    title: 'The big lesson',
     text:
-      'The reservoir, irrigation channels, terraces and trees all point to the same truth: in the High Atlas, water management is survival, politics, engineering and everyday life at once.',
+      'The weakest plans were the ones that tried to add another monument. The strongest plans combined one good experience with shade, food, games, rest or something modern.',
   },
   {
-    icon: '⌛',
-    title: 'Almohad echoes',
+    icon: '◌',
+    title: 'Food arc',
     text:
-      'Tinmel, deeper in the mountains, was tied to the Almohad movement that shaped medieval Marrakesh. The mountain backstory helps explain why the city became so important.',
+      'First chicken tajine and couscous were not hits, but later beef tagine and Moroccan breakfast breads worked better. Context and tiredness mattered.',
   },
   {
-    icon: '🧭',
-    title: '2023 earthquake context',
+    icon: '☀',
+    title: 'Heat reality',
     text:
-      'Al Haouz was hit hard by the September 2023 earthquake. Enjoy the valley, but do it with humility: tourism should notice real communities, not just scenery.',
+      'Marrakesh in June rewards early starts and punishes heroic afternoons. The site now treats rest as part of the itinerary, not a failure.',
   },
 ]
 
 const quizQuestions: QuizQuestion[] = [
   {
-    question: 'Where is Ouirgane compared with Marrakesh?',
-    answer: 'South to south-west of Marrakesh, in the High Atlas foothills, beyond Asni.',
+    question: 'Which stop felt most different from Marrakesh?',
+    answer: 'Ouirgane for mountain quiet, or Agafay for open stone-desert sky.',
   },
   {
-    question: 'Why do terraces matter in mountain farming?',
-    answer: 'They slow water, reduce erosion and create flat growing space on steep land.',
+    question: 'Which palace or museum day confirmed “empty room” fatigue?',
+    answer: 'Bahia Palace and the broader Marrakesh monument run made it clear the family needed variety.',
   },
   {
-    question: 'What should we avoid doing in villages?',
-    answer: 'Do not photograph people closely without asking, do not treat homes as scenery, and keep clothing/behaviour respectful.',
+    question: 'What was the Google Photos mystery?',
+    answer: 'Camel ride photos appeared at the right time, while videos showed about one hour later.',
   },
   {
-    question: 'Why is Bahia Palace not in today’s plan?',
-    answer: 'Because today is a transfer and mountain reset day; Bahia fits better when we return to Marrakesh for a palace/history cluster.',
-  },
-]
-
-const videoLinks = [
-  {
-    title: 'High Atlas landscapes',
-    url: 'https://www.youtube.com/results?search_query=High+Atlas+Morocco+Ouirgane+valley',
-    description: 'Search YouTube for short visual previews of the road, villages and mountain scenery.',
-  },
-  {
-    title: 'Tinmel and the Almohads',
-    url: 'https://www.youtube.com/results?search_query=Tinmel+Mosque+Almohad+Morocco+history',
-    description: 'Useful background for why these mountains mattered to medieval Marrakesh.',
-  },
-  {
-    title: 'Amazigh culture in Morocco',
-    url: 'https://www.youtube.com/results?search_query=Amazigh+culture+Morocco+High+Atlas',
-    description: 'Good context for language, villages, food, music, weaving and identity.',
+    question: 'What was the final-day planning principle?',
+    answer: 'One good thing plus logistics. Do not add fragile plans on departure day.',
   },
 ]
 
@@ -157,7 +128,7 @@ function TodayPage() {
 
   const completedCount = checkedItems.length
   const progressLabel = useMemo(
-    () => `${completedCount}/${valleyMission.length} valley clues found`,
+    () => `${completedCount}/${departureMission.length} departure checks done`,
     [completedCount],
   )
 
@@ -173,30 +144,30 @@ function TodayPage() {
     <>
       <section className="today-hero today-hero--mountain">
         <div className="today-hero__content">
-          <p className="hero__kicker">Friday 19 June</p>
-          <h1>Marrakesh to Ouirgane</h1>
+          <p className="hero__kicker">Thursday 25 June</p>
+          <h1>Departure day</h1>
           <p className="today-hero__intro">
-            Today is deliberately calmer: leave the medina, drive south-west into the High Atlas foothills,
-            check in at Ouirgane Ecolodge, then use the afternoon for a short valley walk and a
-            golden-hour reservoir view. The win is not cramming in more sights; it is changing pace.
+            The actual trip is now behind us: Marrakesh, Ouirgane, Agafay and back to Marrakesh.
+            Today is about leaving well: no new sightseeing pressure, just packing, airport buffer,
+            photos, music and a calmer flight home.
           </p>
           <div className="today-hero__pills" aria-label="Today summary">
-            <span>65 km from Marrakesh</span>
-            <span>Via Asni</span>
-            <span>High Atlas</span>
-            <span>Sunset reservoir</span>
+            <span>Pack</span>
+            <span>Check out</span>
+            <span>Airport buffer</span>
+            <span>Fly home</span>
           </div>
         </div>
-        <div className="today-map-real" aria-label="Real map of Marrakesh, Asni and Ouirgane">
+        <div className="today-map-real" aria-label="Real map of Marrakesh airport area">
           <iframe
-            title="Map from Marrakesh to Ouirgane"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-8.222%2C31.078%2C-7.814%2C31.692&layer=mapnik&marker=31.183%2C-8.083"
+            title="Map of Marrakesh and the airport"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-8.091%2C31.555%2C-7.885%2C31.688&layer=mapnik&marker=31.606%2C-8.036"
             loading="lazy"
           />
           <div className="today-map-real__caption">
-            <strong>Marrakesh → Asni → Ouirgane</strong>
+            <strong>Riad Salman → Marrakesh airport</strong>
             <a
-              href="https://www.google.com/maps/dir/Marrakesh/Ouirgane"
+              href="https://www.google.com/maps/dir/Riad+Salman,+Marrakesh/Marrakesh+Menara+Airport"
               target="_blank"
               rel="noreferrer"
             >
@@ -208,11 +179,10 @@ function TodayPage() {
 
       <section className="page-section today-dashboard">
         <div className="section-heading">
-          <p className="eyebrow">Today’s route</p>
-          <h2>Tap a stop before you arrive</h2>
+          <p className="eyebrow">Today’s plan</p>
+          <h2>Leave without drama</h2>
           <p>
-            The day is built around transition: city to valley, noise to quiet, red walls to red hills.
-            Keep expectations flexible; the mountains reward looseness more than over-planning.
+            This page is now a departure checklist and post-trip reflection, not another sightseeing plan.
           </p>
         </div>
 
@@ -236,11 +206,7 @@ function TodayPage() {
 
                 {isOpen && (
                   <div className="today-stop__details">
-                    <img
-                      src={stop.image}
-                      alt={stop.alt}
-                      loading="lazy"
-                    />
+                    <img src={stop.image} alt={stop.alt} loading="lazy" />
                     <div className="today-stop__text">
                       <p>{stop.context}</p>
                       <div className="notice-strip">
@@ -263,8 +229,8 @@ function TodayPage() {
 
       <section className="page-section curiosity-grid-section">
         <div className="section-heading">
-          <p className="eyebrow">Look closer</p>
-          <h2>Four ideas that unlock Ouirgane</h2>
+          <p className="eyebrow">What the trip taught us</p>
+          <h2>Four corrections to the original plan</h2>
         </div>
 
         <div className="curiosity-grid">
@@ -281,16 +247,13 @@ function TodayPage() {
       <section className="page-section mission-section">
         <div className="mission-card">
           <div>
-            <p className="eyebrow">Valley mission</p>
+            <p className="eyebrow">Departure checklist</p>
             <h2>{progressLabel}</h2>
-            <p>
-              A light noticing game for the drive, lodge and walk. The goal is to see the working
-              valley, not just take mountain photos.
-            </p>
+            <p>Useful, boring and exactly what today needs.</p>
           </div>
 
           <div className="mission-checklist">
-            {valleyMission.map((item) => (
+            {departureMission.map((item) => (
               <button
                 className={checkedItems.includes(item) ? 'mission-item mission-item--checked' : 'mission-item'}
                 key={item}
@@ -305,32 +268,12 @@ function TodayPage() {
         </div>
       </section>
 
-      <section className="page-section today-media-section">
-        <div className="section-heading">
-          <p className="eyebrow">Watch before or after</p>
-          <h2>Short video rabbit holes</h2>
-          <p>
-            These open YouTube searches rather than locking the page to one video that may disappear or
-            be region-blocked on mobile data.
-          </p>
-        </div>
-        <div className="video-grid">
-          {videoLinks.map((video) => (
-            <a className="video-card" href={video.url} target="_blank" rel="noreferrer" key={video.title}>
-              <span aria-hidden="true">▶</span>
-              <h3>{video.title}</h3>
-              <p>{video.description}</p>
-            </a>
-          ))}
-        </div>
-      </section>
-
       <section className="page-section quiz-section">
         <div className="mission-card quiz-card">
           <div>
-            <p className="eyebrow">Car quiz</p>
-            <h2>Four questions for the road</h2>
-            <p>Tap each question after everyone has guessed. No scores needed unless Sarah and Sonia insist.</p>
+            <p className="eyebrow">Flight quiz</p>
+            <h2>Four questions to close the loop</h2>
+            <p>Tap after everyone has guessed.</p>
           </div>
           <div className="quiz-list">
             {quizQuestions.map((item) => {
@@ -349,25 +292,6 @@ function TodayPage() {
             })}
           </div>
         </div>
-      </section>
-
-      <section className="page-section later-section">
-        <article className="later-card">
-          <div>
-            <p className="eyebrow">Keep for later</p>
-            <h2>Do not turn today into homework</h2>
-            <p>
-              Tinmel, deeper history and longer hikes can wait unless the lodge recommends a very easy option.
-              Today should protect energy: transfer, lunch, swim/rest if available, short walk, sunset, dinner.
-            </p>
-          </div>
-          <div className="later-card__stack">
-            <span>Ask lodge about a gentle local walk</span>
-            <span>Confirm tomorrow’s mountain plan</span>
-            <span>Keep Bahia Palace for Marrakesh return</span>
-            <span>Carry a light layer after sunset</span>
-          </div>
-        </article>
       </section>
     </>
   )
